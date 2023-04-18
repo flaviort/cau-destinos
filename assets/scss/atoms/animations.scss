@@ -1,0 +1,34 @@
+.wow {
+	animation-duration: 2s;
+	will-change: transform opacity;
+}
+
+@keyframes foglayer_01_opacity {
+	0% { opacity: .1; }
+	22% { opacity: .5; }
+	40% { opacity: .28; }
+	58% { opacity: .4; }
+	80% { opacity: .16; }
+	100% { opacity: .1; }
+}
+
+@keyframes foglayer_02_opacity {
+	0% { opacity: .5; }
+	25% { opacity: .2; }
+	50% { opacity: .1; }
+	80% { opacity: .3; }
+	100% { opacity: .5; }
+}
+
+@keyframes foglayer_03_opacity {
+	0% { opacity: .8; }
+	27% { opacity: .2; }
+	52% { opacity: .6; }
+	68% { opacity: .3; }
+	100% { opacity: .8; }
+}
+
+@keyframes foglayer_moveme {
+	0% { left: 0; }
+	100% { left: -100%; }
+}

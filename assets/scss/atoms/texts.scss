@@ -1,0 +1,69 @@
+.text-small,
+.text-big,
+.text-bigger {
+	font-weight: $regular;
+	font-variant: no-common-ligatures;
+	letter-spacing: normal;
+
+	* {
+		font-family: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		font-size: inherit;
+		color: inherit;
+	}
+
+	strong, b {
+		font-size: inherit;
+		line-height: inherit;
+		color: inherit;
+		font-weight: $bold;
+		font-family: inherit;
+	}
+
+	small {
+		font-size: 45%;
+		vertical-align: super;
+	}
+}
+
+.text-small {
+	font-size: 12px;
+	line-height: 1.6;
+
+	@media #{$mq-md-min} {
+		font-size: 14px;
+	}
+
+	@media #{$mq-lg-min} {
+		font-size: 16px;
+	}
+}
+
+.text-big {
+	font-size: 26px;
+	line-height: 1.4;
+
+	@media #{$mq-xs-min} {
+		font-size: 30px;
+		line-height: 1.2;
+	}
+
+	@media #{$mq-sm-min} {
+		font-size: 34px;
+		line-height: 1.15;
+	}
+
+	@media #{$mq-md-min} {
+		font-size: 40px;
+		line-height: 1.1;
+	}
+
+	@media #{$mq-lg-min} {
+		font-size: 44px;
+	}
+
+	@media #{$mq-xl-min} {
+		font-size: 48px;
+	}
+}
