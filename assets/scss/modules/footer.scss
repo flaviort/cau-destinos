@@ -2,7 +2,7 @@
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     background-color: $blue;
-    margin-top: clamp(2rem, 15vw, 15rem);
+    margin-top: clamp(2rem, 10vw, 10rem);
     
     @media #{$mq-sm-min} {
         border-radius: 0;
@@ -33,17 +33,21 @@
             line-height: 1.7;
 
             @media #{$mq-xs-min} {
-                font-size: 3.75vw;
+                font-size: 4.5vw;
                 line-height: 1.65;
             }
 
+            @media #{$mq-sm-min} {
+                font-size: 4vw;
+            }
+
             @media #{$mq-md-min} {
-                font-size: 3.4vw;
+                font-size: 3.2vw;
                 line-height: 1.4;
             }
 
             @media #{$mq-2xl-min} {
-                font-size: 3.675vw;
+                font-size: 3.5vw;
             }
 
             .number {

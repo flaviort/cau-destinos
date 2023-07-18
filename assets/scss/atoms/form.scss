@@ -1,0 +1,113 @@
+.form-line {
+    display: block;
+    margin-bottom: 1rem;
+
+    &.error {
+        .label {
+            color: $red;
+        }
+
+        .line-wrapper {
+            .input {
+                border-color: $red;
+
+                &::placeholder {
+                    color: $red;
+                }
+            }
+        }
+
+        label.error {
+            color: $red;
+            font-size: .7rem;
+            margin-top: .75rem;
+        }
+    }
+
+    .label {
+        display: block;
+        color: $blue;
+
+        .red {
+            color: $red;
+        }
+    }
+
+    .line-wrapper {
+        display: block;
+        position: relative;
+
+        .input {
+            position: relative;
+            z-index: 0;
+            display: block;
+            width: 100%;
+            background-color: $white;
+            border: none;
+            border-bottom: 1px solid $gray-light;
+            box-shadow: none;
+            padding: .75rem 0;
+
+            &.textarea {
+                min-height: 9rem;
+                height: 9rem;
+                resize: none;
+                overflow-y: scroll;
+                cursor: auto;
+
+                @media #{$mq-md-min} {
+                    min-height: 7.5rem;
+                    height: 7.5rem;
+                }
+
+                &::-webkit-scrollbar {
+                    width: 5px;
+                    height: 5px;
+                }
+            
+                &::-webkit-scrollbar-track {
+                    background-color: $white;
+                    border-radius: 10px;
+                }
+            
+                &::-webkit-scrollbar-thumb {
+                    background: $blue;
+                    border-radius: 10px;
+                }
+            }
+
+            &.select {
+                cursor: pointer;
+                padding: .75rem 1rem;
+
+                @media #{$mq-md-min} {
+                    padding: .725rem 1.25rem;
+                }
+            }
+
+            &::placeholder {
+                color: $blue;
+                text-transform: lowercase;
+            }
+
+            &:-webkit-autofill,
+            &:-webkit-autofill:hover, 
+            &:-webkit-autofill:focus, 
+            &:-webkit-autofill:active {
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: $black;
+                transition: background-color 5000s ease-in-out 0s;
+                box-shadow: inset 0 0 0 1rem $white;
+                font-size: 1rem;
+            }
+
+            &:-webkit-autofill::first-line {
+                font-size: 1rem!important;
+            }
+        }
+    }
+
+    input[type='submit'] {
+        display: none;
+    }
+}

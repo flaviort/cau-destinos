@@ -143,6 +143,19 @@ section {
 	overflow: hidden;
 }
 
+.cover {
+	position: absolute;
+    top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+
+	&.parallax-img {
+		height: 115%;
+	}
+}
+
 html,
 body {
 	-webkit-font-smoothing: antialiased;
@@ -151,7 +164,7 @@ body {
 	color: $gray-dark;
 	font-weight: $regular;
 	font-style: normal;
-	font-size: 15px;
-	font-size: clamp(15px, 1.2vw, 19px);
-	line-height: 1.8;
+	font-size: 16px;
+	font-size: clamp(16px, 1.2vw, 20px);
+	line-height: 1.6;
 }

@@ -3,9 +3,8 @@
 	max-width: calc(100% - .25rem);	
 	@media #{$mq-xs-min} { max-width: 95%; }
 	@media #{$mq-md-min} { max-width: 90%; }
-	@media #{$mq-lg-min} { max-width: 85%; }
-	@media #{$mq-xl-min} { max-width: 80%; }
-	@media #{$mq-2xl-min} { max-width: calc(90vw - 8rem) }
+	@media #{$mq-xl-min} { max-width: 90%; }
+	@media #{$mq-2xl-min} { max-width: calc(100vw - 10rem) }
 }
 
 .container-big {

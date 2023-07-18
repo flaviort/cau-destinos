@@ -64,7 +64,7 @@
 </section>
 
 <section id='contact'>
-	<div class='container container-big'>
+	<div class='container'>
 		<div class='row'>
 
 			<div class='col-md-5 left'>
@@ -78,59 +78,27 @@
 				<form action='#' class='form-validate'>
 
 					<div class='form-line'>
-
-						<label for='contact-name' class='label'>
-							Nome
-						</label>
-
 						<div class='line-wrapper'>
-
-							<input type='text' id='contact-name' name='Nome' class='input' required>
-
+							<input type='text' id='contact-name' name='Nome' class='input' placeholder='Nome' required>
 						</div>
-
 					</div>
 
 					<div class='form-line'>
-
-						<label for='contact-email' class='label'>
-							Email
-						</label>
-
 						<div class='line-wrapper'>
-
-							<input type='email' id='contact-email' name='Email' class='input' required>
-
+							<input type='email' id='contact-email' name='Email' class='input' placeholder='Email' required>
 						</div>
-
 					</div>
 
 					<div class='form-line'>
-
-						<label for='contact-phone' class='label'>
-							Telefone
-						</label>
-
 						<div class='line-wrapper'>
-
-							<input type='text' id='contact-phone' name='Telefone' class='input'>
-
+							<input type='text' id='contact-phone' name='Telefone' placeholder='Telefone' class='input'>
 						</div>
-
 					</div>
 
 					<div class='form-line'>
-
-						<label for='contact-message' class='label'>
-							Mensagem
-						</label>
-
 						<div class='line-wrapper'>
-
-							<textarea id='contact-message' name='Mensagem' class='input textarea' required></textarea>
-
+							<textarea id='contact-message' name='Mensagem' class='input textarea' placeholder='Mensagem' required></textarea>
 						</div>
-
 					</div>
 
 					<div class='form-line'>
@@ -152,10 +120,10 @@
 			<div class='col-md-7 right'>
 
 				<div class='image'>
-					<img data-src='assets/img/camel.jpg' alt='Camelo' class='lazy cover'>
+					<img data-src='assets/img/camel.jpg' alt='Camelo' class='lazy cover parallax-img'>
 				</div>
 
-				<p>
+				<p data-speed='.975'>
 					Egito
 				</p>
 

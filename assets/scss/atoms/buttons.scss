@@ -16,3 +16,37 @@
         background-size: 100% var(--border-width);
     }
 }
+
+.blue-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin: -1rem -2rem;
+    transition: all .3s ease;
+    width: fit-content;
+
+    span {
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        gap: .25rem;
+        font-weight: $bold;
+        background-color: $blue;
+        color: $white;
+        padding: clamp(1.5rem, 1.75vw, 1.75rem) clamp(3rem, 4vw, 4rem);
+        line-height: 1;
+        text-transform: lowercase;
+        border-radius: 10rem;
+        white-space: nowrap;
+        text-align: center;
+        transition: transform .6s cubic-bezier(0.3, 1, 0.7, 1), background-color .3s, color .3s;
+        will-change: transform;
+
+        &:hover {
+            background-color: lighten($blue, 15);
+        }
+    }
+}

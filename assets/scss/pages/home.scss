@@ -1,5 +1,96 @@
 #main-content {
     &.home {
-        
+        #banner {
+
+        }
+
+        #about {
+
+        }
+
+        #cards {
+
+        }
+
+        #services {
+
+        }
+
+        #team {
+
+        }
+
+        #testimonials {
+            height: 100vh;
+        }
+
+        #contact {
+            overflow: visible;
+
+            .left {
+                @media #{$mq-lg-min} {
+                    padding-right: 3rem;
+                }
+
+                h2 {
+                    display: block;
+                    margin-bottom: clamp(2rem, 3vw, 3rem);
+                }
+
+                .blue-button {
+                    width: 100%;
+                    margin: 1rem 0 -1rem 0;
+                    padding: 0;
+
+                    span {
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+
+            .right {
+                display: none;
+
+                @media #{$mq-md-min} {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .image {
+                    position: absolute;
+                    top: 0;
+                    right: 15px;
+                    z-index: 1;
+                    overflow: hidden;
+                    width: calc(100% - 30px);
+                    height: 100%;
+                    max-height: 40rem;
+                    border-radius: 2rem;
+
+                    @media #{$mq-lg-min} {
+                        border-top-right-radius: 2rem;
+                        border-bottom-right-radius: 2rem;
+                        border-top-left-radius: 100rem;
+                        border-bottom-left-radius: 100rem;
+                    }
+                }
+
+                p {
+                    position: absolute;
+                    z-index: 2;
+                    top: clamp(32rem, 35vw, 35rem);
+                    right: 2rem;
+                    display: inline-block;
+                    padding: .5rem 2rem;
+                    border-radius: 3rem;
+                    color: $white;
+                    text-transform: lowercase;
+                    font-weight: $bold;
+                    backdrop-filter: blur(1rem);
+                }
+            }
+        }
     }
 }

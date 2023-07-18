@@ -137,6 +137,11 @@ function validateForms() {
 				},
 				unhighlight: function (element){
 					$(element).closest('.form-line').removeClass('error')
+				},
+				messages: {
+					Nome: "Este campo é obrigatório",
+					Email: "Este campo é obrigatório",
+					Mensagem: "Este campo é obrigatório",
 				}
 			})
 		})
