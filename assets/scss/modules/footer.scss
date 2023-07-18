@@ -1,3 +1,186 @@
 #footer {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: $blue;
+    margin-top: clamp(2rem, 15vw, 15rem);
     
+    @media #{$mq-sm-min} {
+        border-radius: 0;
+        background-color: transparent;
+    }
+
+    .blue-box {
+        display: block;
+        color: $white;
+        text-align: center;
+        padding: 3rem 1rem;
+
+        @media #{$mq-sm-min} {
+            border-radius: clamp(1rem , 2vw, 2rem);
+            background-color: $blue;
+            padding: 4rem 4rem 3rem 4rem;
+            margin-bottom: 2rem;
+        }
+
+        @media #{$mq-lg-min} {
+            text-align: left;
+        }
+
+        .top {
+            font-size: 6vw;
+            text-align: justify;
+            text-align-last: justify;
+            font-weight: $light;
+            line-height: 1.7;
+
+            @media #{$mq-xs-min} {
+                font-size: 3.75vw;
+                line-height: 1.65;
+            }
+
+            @media #{$mq-md-min} {
+                font-size: 3.4vw;
+                line-height: 1.4;
+            }
+
+            @media #{$mq-2xl-min} {
+                font-size: 3.6vw;
+            }
+
+            .number {
+                color: $green;
+            }
+        }
+
+        .bottom {
+            text-transform: lowercase;
+            padding-top: clamp(4rem , 15vw, 13rem);
+
+            @media #{$mq-lg-min} {
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+
+            .left {
+                .featured-text {
+                    display: block;
+                    margin-bottom: 3rem;
+
+                    @media #{$mq-md-min} {
+                        margin-bottom: clamp(1rem, 3vw, 3rem);
+                    }
+
+                    span {
+                        color: $green;
+                    }
+                }
+
+                .flex {
+                    @media #{$mq-lg-min} {
+                        display: flex;
+                        flex-direction: column-reverse;
+                    }
+
+                    .contact {
+                        @media #{$mq-md-min} {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 2rem;
+                        }
+
+                        @media #{$mq-lg-min} {
+                            justify-content: flex-start;
+                        }
+                    }
+
+                    .social {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1.725rem;
+                        margin-top: 4rem;
+                        padding-top: 4rem;
+                        border-top: 1px solid $white;
+
+                        @media #{$mq-md-min} {
+                            gap: 2rem;
+                        }
+
+                        @media #{$mq-lg-min} {
+                            justify-content: flex-start;
+                            margin: 0 0 1rem 0;
+                            padding-top: 0;
+                            border: none;
+                        }
+
+                        li {
+                            &:last-child {
+                                a {
+                                    color: $green;
+                                }
+                            }
+
+                            a {
+                                display: flex;
+                                width: 2rem;
+                                height: 2rem;
+                                padding: .275rem;
+                                color: $green;
+
+                                @media #{$mq-md-min} {
+                                    width: auto;
+                                    height: auto;
+                                    padding: 0;
+                                    color: $white;
+                                }
+
+                                .text {
+                                    display: none;
+
+                                    @media #{$mq-md-min} {
+                                        display: block;
+                                    }
+                                }
+
+                                svg {
+                                    display: block;
+
+                                    @media #{$mq-md-min} {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right {
+                .logo {
+                    display: flex;
+                    width: clamp(10rem, 15vw, 15rem);
+                    transition: .3s ease-in-out;
+                    margin: 2.5rem auto auto auto;
+
+                    @media #{$mq-md-min} {
+                        margin-top: 2rem;
+                    }
+
+                    @media #{$mq-lg-min} {
+                        margin: 0;
+                    }
+
+                    &:hover {
+                        color: $green;
+                    }
+
+                    svg {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 }

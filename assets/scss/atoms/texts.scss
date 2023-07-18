@@ -1,69 +1,33 @@
-.text-small,
-.text-big,
-.text-bigger {
-	font-weight: $regular;
-	font-variant: no-common-ligatures;
-	letter-spacing: normal;
+.text-small {
+	font-size: .85rem;
 
-	* {
-		font-family: inherit;
-		font-weight: inherit;
-		line-height: inherit;
-		font-size: inherit;
-		color: inherit;
-	}
-
-	strong, b {
-		font-size: inherit;
-		line-height: inherit;
-		color: inherit;
-		font-weight: $bold;
-		font-family: inherit;
-	}
-
-	small {
-		font-size: 45%;
-		vertical-align: super;
+	@media #{$mq-2xl-min} {
+		font-size: .75rem;
 	}
 }
 
-.text-small {
-	font-size: 12px;
-	line-height: 1.6;
-
-	@media #{$mq-md-min} {
-		font-size: 14px;
-	}
-
-	@media #{$mq-lg-min} {
-		font-size: 16px;
-	}
+.text-medium {
+	font-size: 1.175rem;
 }
 
 .text-big {
-	font-size: 26px;
-	line-height: 1.4;
+	font-size: clamp(2.25rem, 3.5vw, 3.5rem);
+	line-height: 1.1;
+}
 
-	@media #{$mq-xs-min} {
-		font-size: 30px;
-		line-height: 1.2;
-	}
+.text-bigger {
+	font-size: clamp(3rem, 5vw, 5rem);
+	line-height: 1.1;
+}
 
-	@media #{$mq-sm-min} {
-		font-size: 34px;
-		line-height: 1.15;
-	}
+.light {
+	font-weight: $light;
+}
 
-	@media #{$mq-md-min} {
-		font-size: 40px;
-		line-height: 1.1;
-	}
+.regular {
+	font-weight: $regular;
+}
 
-	@media #{$mq-lg-min} {
-		font-size: 44px;
-	}
-
-	@media #{$mq-xl-min} {
-		font-size: 48px;
-	}
+.bold {
+	font-weight: $bold;
 }

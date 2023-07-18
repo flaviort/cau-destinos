@@ -1,9 +1,8 @@
-// use these to create a big main.scss
+// global css files used in pretty much all pages
 @import 'atoms/variables';
-//@import 'atoms/breakpoints';
+@import 'atoms/breakpoints';
 @import 'atoms/scroll';
 @import 'atoms/containers';
-@import 'atoms/fonts';
 @import 'atoms/texts';
 @import 'atoms/buttons';
 @import 'atoms/form';
@@ -15,3 +14,6 @@
 @import 'modules/fs-menu';
 @import 'modules/footer';
 @import 'modules/popups';
+
+// pages
+@import 'pages/home';
