@@ -30,7 +30,6 @@
             font-size: 6vw;
             text-align: justify;
             text-align-last: justify;
-            font-weight: $light;
             line-height: 1.7;
 
             @media #{$mq-xs-min} {
@@ -44,7 +43,7 @@
             }
 
             @media #{$mq-2xl-min} {
-                font-size: 3.6vw;
+                font-size: 3.675vw;
             }
 
             .number {

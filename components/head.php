@@ -46,8 +46,10 @@
 			<div id='smooth-content'>
 
 				<header>
-					<?php include('components/modules/fs-menu.php');?>
-					<?php include('components/modules/top-menu.php');?>
+					<?php include('components/top-menu.php');?>
+					<?php include('components/fs-menu.php');?>
+					<?php include('components/floating-whatsapp.php');?>
+					<div id='mouse'></div>
 				</header>
 
 				<main id='main-content' class='<?php echo($currentPage); ?>'>

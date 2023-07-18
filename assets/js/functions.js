@@ -179,25 +179,6 @@ function initScrollSmoother() {
 // here goes all the scroll related animations
 function scrollTriggerAnimations() {
 
-	// title fill animation
-	if(select('.fill-title')) {
-
-		const split = new SplitText('.fill-title', { type: 'lines' })
-
-		split.lines.forEach((target) => {
-			gsap.to(target, {
-				backgroundPositionX: 0,
-				ease: 'none',
-				scrollTrigger: {
-					trigger: target,
-					scrub: 3,
-					start: 'top 90%',
-					end: 'bottom 75%'
-				}
-			})
-		})
-	}
-
 	// reveal text animation
 	if(select('.reveal-text')) {
 
@@ -234,6 +215,30 @@ function scrollTriggerAnimations() {
     
 }
 
+// init the top menu
+function initTopMenu() {
+	
+	let currentScroll = 0;
+	let isScrollingDown = true;
+	var topMenu = document.getElementById('top-menu')
+
+	$('#top-menu').addClass('fixed')
+
+	window.addEventListener('scroll', function(){
+	
+		if ( window.pageYOffset > currentScroll ) {
+			isScrollingDown = true;
+			topMenu.classList.remove('fixed');
+		} else {
+			isScrollingDown = false;
+			topMenu.classList.add('fixed');
+		}
+		
+		currentScroll = window.pageYOffset
+		
+	})
+}
+
 // init all the sliders on the website
 function initSliders() {
 
@@ -267,7 +272,7 @@ function initSliders() {
 // disable console warnings and show skyline message
 function initCopyright() {
 	//console.clear()
-	const message = 'Masterpiece by Senz Design 🔗 www.senzdsn.com'
+	const message = 'Design VVE Fight 🔗 www.vvefight.com \nCode Senz Design 🔗 www.senzdsn.com'
 	const style = 'color: #f8f8f8; font-size: 12px; font-weight: bold; background-color: #0d0e13; padding: 8px'
 	console.log(`%c${message}`, style)
 }
@@ -396,6 +401,7 @@ function initScript() {
 	initScrollSmoother()
 	initCopyright()
 	initMouseCursor()
+	initTopMenu()
 	//openingAnimation()
 }
 

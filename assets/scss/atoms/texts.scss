@@ -11,7 +11,7 @@
 }
 
 .text-big {
-	font-size: clamp(2.25rem, 3.5vw, 3.5rem);
+	font-size: clamp(2rem, 3vw, 3rem);
 	line-height: 1.1;
 }
 
@@ -30,4 +30,8 @@
 
 .bold {
 	font-weight: $bold;
+}
+
+.blue {
+	color: $blue;
 }

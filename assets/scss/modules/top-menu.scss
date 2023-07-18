@@ -1,3 +1,15 @@
 #top-menu {
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+    margin: auto;
+    transform: translateY(-125%);
+    transition: 1s ease-in-out;
+    overflow: visible;
+
+    &.fixed {
+        transform: none;
+    }
 }

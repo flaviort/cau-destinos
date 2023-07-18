@@ -5,9 +5,34 @@
                                     <div class='blue-box'>
 
                                         <div class='top'>
-                                            <p class='reveal-text'>
-                                                <span class='number'>+20</span> Cairo <span class='number'>+598</span> Uruguai <span class='number'>+61</span> Austrália <span class='number'>+351</span> Portugal <span class='number'>+45</span> Dinamarca <span class='number'>+218</span> Líbia <span class='number'>+20</span> Egito <span class='number'>+49</span> Alemanha <span class='number'>+358</span> Finlândia <span class='number'>+960</span> Maldivas <span class='number'>+81</span> Japão <span class='number'>+33</span> França <span class='number'>+1</span> Estados Unidos <span class='number'>+52</span> México <span class='number'>+56</span> Chile <span class='number'>+792</span> Israel <span class='number'>+57</span> Colômbia <span class='number'>+34</span> Espanha <span class='number'>+353</span> Irlanda <span class='number'>+976</span> Catar <span class='number'>+43</span> Austria <span class='number'>+39</span> Itália <span class='number'>+353</span> Albânia <span class='number'>+506</span> Costa Rica
+                                            
+                                            <p class='reveal-text light'>
+                                                <span class='number'>+20</span> Cairo
+                                                <span class='number'>+598</span> Uruguai
+                                                <span class='number'>+61</span> Austrália
+                                                <span class='number'>+351</span> Portugal
+                                                <span class='number'>+45</span> Dinamarca
+                                                <span class='number'>+218</span> Líbia
+                                                <span class='number'>+20</span> Egito
+                                                <span class='number'>+49</span> Alemanha
+                                                <span class='number'>+358</span> Finlândia
+                                                <span class='number'>+960</span> Maldivas
+                                                <span class='number'>+81</span> Japão
+                                                <span class='number'>+33</span> França
+                                                <span class='number'>+1</span> Estados Unidos
+                                                <span class='number'>+52</span> México
+                                                <span class='number'>+56</span> Chile
+                                                <span class='number'>+792</span> Israel
+                                                <span class='number'>+57</span> Colômbia
+                                                <span class='number'>+34</span> Espanha
+                                                <span class='number'>+353</span> Irlanda
+                                                <span class='number'>+976</span> Catar
+                                                <span class='number'>+43</span> Austria
+                                                <span class='number'>+39</span> Itália
+                                                <span class='number'>+353</span> Albânia
+                                                <span class='number'>+506</span> Costa Rica
                                             </p>
+
                                         </div>
 
                                         <div class='bottom'>
