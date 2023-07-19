@@ -217,6 +217,21 @@ function scrollTriggerAnimations() {
         })
 
 	}
+
+	// testimonial slider animation
+	if(select('.testimonials-slider')) {
+		gsap.fromTo('.testimonials-slider', {
+			x: '10vw'
+		}, {
+			x: '-10vw',
+			scrollTrigger: {
+				trigger: '.testimonials-slider',
+				start: '-10% 110%',
+				end: '110% -10%',
+				scrub: 2
+			}
+		})
+	}
     
 }
 
@@ -247,27 +262,34 @@ function initTopMenu() {
 // init all the sliders on the website
 function initSliders() {
 
-	// init the why choose slider on the homepage
-	if(select('.why-choose-slider')) {
-		const whyChooseSlider = new Swiper ('.why-choose-slider', {
+	// init the testimonials slider
+	if(select('.testimonials-slider')) {
+		const testimonials_slider = new Swiper('.testimonials-slider', {
 			slidesPerView: 1,
-			loop: true,
+			loop: false,
 			simulateTouch: true,
 			allowTouchMove: true,
-			autoHeight: true,
-			calculateHeight: true,
+			autoHeight: false,
+			calculateHeight: false,
 			spaceBetween: 15,
-			pagination: {
-				el: '#why-choose .why-choose-nav',
-				type: 'bullets',
-				clickable: true,
-			},
-			autoplay: {
-				delay: 9750
+			navigation: {
+				nextEl: '.testimonials-nav .next',
+				prevEl: '.testimonials-nav .prev',
 			},
 			breakpoints: {
 				767: {
-					spaceBetween: 30
+					spaceBetween: 20,
+					slidesPerView: 2
+				}, 1200: {
+					spaceBetween: 30,
+					slidesPerView: 3,
+				}
+			},
+			on: {
+				touchStart(){
+					$('.testimonials-slider').addClass('is-dragging')
+				}, touchEnd(){
+					$('.testimonials-slider').removeClass('is-dragging')
 				}
 			}
 		})
