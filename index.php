@@ -17,14 +17,36 @@
 	<div class='container container-big'>
 		<div class='row'>
 			<div class='col-12'>
-				
+				<div class='blue-box'>
+
+					<h2 class='text-big light reveal-text'>
+						Somos a ponte entre você e novas experıêncıas
+					</h2>
+
+					<div class='row'>
+						
+						<div class='col-md-6'>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr exercitation ullamc laboris nisi ut aliquip ex ea comodo consequat. Duis autept dolor in reprehenderit in vol vellhit esse cillum dolore eur fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proide, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+						</div>
+
+						<div class='col-md-6'>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr exercitation ullamc laboris nisi ut aliquip ex ea comodo consequat. Duis autept dolor in reprehenderit in vol vellhit esse cillum dolore eur fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proide, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</p>
+						</div>
+
+					</div>
+
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
 <section id='cards'>
-	<div class='container container-big'>
+	<div class='container'>
 		<div class='row'>
 			<div class='col-12'>
 				
@@ -43,6 +65,16 @@
 	</div>
 </section>
 
+<section id='directions'>
+	<div class='container container-big'>
+		<div class='row'>
+			<div class='col-12'>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
 <section id='team'>
 	<div class='container'>
 		<div class='row'>
@@ -52,7 +84,7 @@
 
 					<div class='left'>
 
-						<h2 class='text-big light blue'>
+						<h2 class='text-big light blue reveal-text'>
 							Team Cau Destinos
 						</h2>
 
@@ -62,7 +94,7 @@
 
 					</div>
 
-					<div class='team-nav'>
+					<div class='team-nav navigation'>
 
 						<div class='button prev'>
 							<?php echo file_get_contents('assets/svg/ux/angle-left.svg'); ?>
@@ -241,13 +273,13 @@
 
 					<div class='top'>
 
-						<h2 class='text-big light blue'>
+						<h2 class='text-big light blue reveal-text'>
 							Veja o que <br />
 							estão falando <br />
 							da Cau Destinos
 						</h2>
 
-						<div class='testimonials-nav'>
+						<div class='testimonials-nav navigation'>
 
 							<div class='button prev'>
 								<?php echo file_get_contents('assets/svg/ux/angle-left.svg'); ?>
@@ -473,7 +505,7 @@
 
 			<div class='col-md-5 left'>
 
-				<h2 class='text-big light blue'>
+				<h2 class='text-big light blue reveal-text'>
 					Realize a viagem <br />
 					dos seus sonhos <br />
 					<strong>falando conosco!</strong>
