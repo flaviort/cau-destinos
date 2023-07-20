@@ -98,7 +98,8 @@ function initClickAndKeyFunctions() {
 function initLazyLoad() {
 	const lazyLoadInstance = new LazyLoad({ 
 		elements_selector: '.lazy',
-		container: select('.main-wrap')
+		container: select('.main-wrap'),
+		threshold: 200,
 	})
 
 	// refrsh scrolltrigger once an image is loaded
@@ -218,7 +219,28 @@ function scrollTriggerAnimations() {
 
 	}
 
-	// testimonial slider animation
+	// team slider animation
+	if(select('.team-slider')) {
+		gsap.set('.team-slider .swiper-slide', {
+			x: '50vw',
+			opacity: 0,
+			scale: .75
+		})
+
+		gsap.to('.team-slider .swiper-slide', {
+			x: 0,
+			opacity: 1,
+			scale: 1,
+			duration: 1,
+			scrollTrigger: {
+				trigger: '.team-slider',
+				start: '25% 100%',
+				toggleActions: 'restart pause resume reverse',
+			}
+		})
+	}
+
+	// testimonials slider animation
 	if(select('.testimonials-slider')) {
 		gsap.fromTo('.testimonials-slider', {
 			x: '10vw'
@@ -262,10 +284,44 @@ function initTopMenu() {
 // init all the sliders on the website
 function initSliders() {
 
+	// init the team slider
+	if(select('.team-slider')) {
+		const team_slider = new Swiper('.team-slider', {
+			slidesPerView: 1,
+			loop: false,
+			simulateTouch: true,
+			allowTouchMove: true,
+			autoHeight: false,
+			calculateHeight: false,
+			spaceBetween: 15,
+			navigation: {
+				nextEl: '.team-nav .next',
+				prevEl: '.team-nav .prev',
+			},
+			breakpoints: {
+				767: {
+					spaceBetween: 20,
+					slidesPerView: 2
+				}, 1200: {
+					spaceBetween: 30,
+					slidesPerView: 3,
+				}
+			},
+			on: {
+				touchStart(){
+					$('.team-slider').addClass('is-dragging')
+				}, touchEnd(){
+					$('.team-slider').removeClass('is-dragging')
+				}
+			}
+		})
+	}
+
 	// init the testimonials slider
 	if(select('.testimonials-slider')) {
 		const testimonials_slider = new Swiper('.testimonials-slider', {
 			slidesPerView: 1,
+			initialSlide: 1,
 			loop: false,
 			simulateTouch: true,
 			allowTouchMove: true,
@@ -294,6 +350,7 @@ function initSliders() {
 			}
 		})
 	}
+
 }
 
 // disable console warnings and show skyline message

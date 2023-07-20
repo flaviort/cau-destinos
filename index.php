@@ -44,9 +44,189 @@
 </section>
 
 <section id='team'>
-	<div class='container container-big'>
+	<div class='container'>
 		<div class='row'>
 			<div class='col-12'>
+
+				<div class='top'>
+
+					<div class='left'>
+
+						<h2 class='text-big light blue'>
+							Team Cau Destinos
+						</h2>
+
+						<p class='desc'>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr exercitation ullamc laboris nisi ut aliquip ex ea comodo consequat.
+						</p>
+
+					</div>
+
+					<div class='team-nav'>
+
+						<div class='button prev'>
+							<?php echo file_get_contents('assets/svg/ux/angle-left.svg'); ?>
+							<?php echo file_get_contents('assets/svg/ux/angle-left.svg'); ?>
+						</div>
+
+						<div class='button next'>
+							<?php echo file_get_contents('assets/svg/ux/angle-right.svg'); ?>
+							<?php echo file_get_contents('assets/svg/ux/angle-right.svg'); ?>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class='team-slider swiper-container'>
+					<div class='swiper-wrapper'>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<img data-src='assets/img/team/01.jpg' alt='Caroline Ferreira' class='lazy cover'>
+
+								<h3 class='text-big'>
+									<b>
+										Caroline Ferreira
+									</b>
+								</h3>
+
+								<p>
+									Diretora Administrativa
+								</p>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<img data-src='assets/img/team/02.jpg' alt='Fábio Nicolau' class='lazy cover'>
+
+								<h3 class='text-big'>
+									<b>
+										Fábio Nicolau
+									</b>
+								</h3>
+
+								<p>
+									Diretor Operacional
+								</p>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<img data-src='assets/img/team/03.jpg' alt='Jussara Lopes' class='lazy cover'>
+
+								<h3 class='text-big'>
+									<b>
+										Jussara Lopes
+									</b>
+								</h3>
+
+								<p>
+									Gestora
+								</p>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<img data-src='assets/img/team/04.jpg' alt='Milena Biagi' class='lazy cover'>
+
+								<h3 class='text-big'>
+									<b>
+										Milena Biagi
+									</b>
+								</h3>
+
+								<p>
+									Gestora
+								</p>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<img data-src='assets/img/team/01.jpg' alt='Caroline Ferreira' class='lazy cover'>
+
+								<h3 class='text-big'>
+									<b>
+										Caroline Ferreira
+									</b>
+								</h3>
+
+								<p>
+									Diretora Administrativa
+								</p>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<img data-src='assets/img/team/02.jpg' alt='Fábio Nicolau' class='lazy cover'>
+
+								<h3 class='text-big'>
+									<b>
+										Fábio Nicolau
+									</b>
+								</h3>
+
+								<p>
+									Diretor Operacional
+								</p>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<img data-src='assets/img/team/03.jpg' alt='Jussara Lopes' class='lazy cover'>
+
+								<h3 class='text-big'>
+									<b>
+										Jussara Lopes
+									</b>
+								</h3>
+
+								<p>
+									Gestora
+								</p>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<img data-src='assets/img/team/04.jpg' alt='Milena Biagi' class='lazy cover'>
+
+								<h3 class='text-big'>
+									<b>
+										Milena Biagi
+									</b>
+								</h3>
+
+								<p>
+									Gestora
+								</p>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
 				
 			</div>
 		</div>
