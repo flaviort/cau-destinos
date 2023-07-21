@@ -1,12 +1,12 @@
 // register split text
 gsap.registerPlugin(ScrollTrigger, SplitText, ScrollSmoother)
 
-const body = document.body;
-const select = (e) => document.querySelector(e);
-const selectAll = (e) => document.querySelectorAll(e);
-const selectId = (id) => document.getElementById(id);
-const vh = (coef) => window.innerHeight * (coef/100);
-const vw = (coef) => window.innerWidth * (coef/100);
+const body = document.body
+const select = (e) => document.querySelector(e)
+const selectAll = (e) => document.querySelectorAll(e)
+const selectId = (id) => document.getElementById(id)
+const vh = (coef) => window.innerHeight * (coef/100)
+const vw = (coef) => window.innerWidth * (coef/100)
 
 // init all click, mouseover and keyup functions
 function initClickAndKeyFunctions() {
@@ -63,7 +63,6 @@ function initClickAndKeyFunctions() {
 
 	// faq open / close
 	$('.faq-question .question').click(function(){
-		if (isDoubleClicked($(this))) return;
 		$(this).parent('.faq-question').toggleClass('active')
 		$(this).siblings('.answer').slideToggle()
 		setTimeout(function(){
@@ -75,16 +74,16 @@ function initClickAndKeyFunctions() {
     if ($(window).width() > 993) {
         const links = selectAll('.magnet')
         const animateLink = function(e){
-            const link = this.querySelector('span');
+            const link = this.querySelector('span')
             const { offsetX: x, offsetY: y } = e
-            const { offsetWidth: width, offsetHeight: height } = this;
+            const { offsetWidth: width, offsetHeight: height } = this
 
-            intensity = 50;
-            xMove = x / width * (intensity * 2) - intensity;
-            yMove = y / height * (intensity * 2) - intensity;
-            link.style.transform = 'translate(' + xMove + 'px,' + yMove + 'px)';
+            intensity = 50
+            xMove = x / width * (intensity * 2) - intensity
+            yMove = y / height * (intensity * 2) - intensity
+            link.style.transform = 'translate(' + xMove + 'px,' + yMove + 'px)'
 
-            if(e.type == 'mouseleave') link.style.transform = '';
+            if(e.type == 'mouseleave') link.style.transform = ''
         }
 
         links.forEach(link => {
@@ -188,14 +187,14 @@ function scrollTriggerAnimations() {
 	// reveal text animation
 	if(select('.reveal-text')) {
 
-        const texts = selectAll('.reveal-text');
+        const texts = selectAll('.reveal-text')
     
         texts.forEach(text => {
             
             // reset if needed
             if(text.anim) {
-                text.anim.progress(1).kill();
-            	text.split.revert();
+                text.anim.progress(1).kill()
+            	text.split.revert()
             }
 
             text.split = new SplitText(text, { 
@@ -218,9 +217,99 @@ function scrollTriggerAnimations() {
         })
 
 	}
+    
+}
 
-	// team slider animation
+// init the cards section
+function initCards() {
+	if(select('.cards-slider')) {
+
+		// check if the windows is below or above 993px
+		if ($(window).width() > 993) {
+
+			gsap.set('.cards-slider .swiper-slide', {
+				opacity: 0,
+				y: '25vh'
+			})
+	
+			ScrollTrigger.batch('.cards-slider .swiper-slide', {
+				start: '0 95%',
+				onEnter: elements => {
+					  gsap.to(elements, {
+						opacity: 1,
+						y: 0,
+						stagger: 0.25,
+						duration: 1
+					})
+				},
+				onLeaveBack: elements => {
+					gsap.to(elements, {
+						opacity: 0,
+						y: '25vh',
+						stagger: 0.15,
+						duration: 1
+					})
+				}
+			})
+			
+		} else {
+
+			// cards slider animation
+			gsap.set('.cards-slider .swiper-slide', {
+				x: '50vw',
+				opacity: 0,
+				scale: .75
+			})
+
+			gsap.to('.cards-slider .swiper-slide', {
+				x: 0,
+				opacity: 1,
+				scale: 1,
+				duration: 1,
+				scrollTrigger: {
+					trigger: '.cards-slider',
+					start: '25% 100%',
+					toggleActions: 'restart pause resume reverse'
+				}
+			})
+
+			// init the cards slider
+			const cards_slider = new Swiper('.cards-slider', {
+				slidesPerView: 1,
+				loop: false,
+				simulateTouch: true,
+				allowTouchMove: true,
+				autoHeight: false,
+				calculateHeight: false,
+				spaceBetween: 15,
+				navigation: {
+					nextEl: '.cards-nav .next',
+					prevEl: '.cards-nav .prev'
+				},
+				breakpoints: {
+					767: {
+						spaceBetween: 20,
+						slidesPerView: 2
+					}
+				},
+				on: {
+					touchStart(){
+						$('.cards-slider').addClass('is-dragging')
+					}, touchEnd(){
+						$('.cards-slider').removeClass('is-dragging')
+					}
+				}
+			})
+		}
+
+	}
+}
+
+// init the teams section
+function initTeam() {
 	if(select('.team-slider')) {
+
+		// team slider animation
 		gsap.set('.team-slider .swiper-slide', {
 			x: '50vw',
 			opacity: 0,
@@ -235,13 +324,49 @@ function scrollTriggerAnimations() {
 			scrollTrigger: {
 				trigger: '.team-slider',
 				start: '25% 100%',
-				toggleActions: 'restart pause resume reverse',
+				toggleActions: 'restart pause resume reverse'
 			}
 		})
-	}
 
-	// testimonials slider animation
+		// init the team slider
+		const team_slider = new Swiper('.team-slider', {
+			slidesPerView: 1,
+			loop: false,
+			simulateTouch: true,
+			allowTouchMove: true,
+			autoHeight: false,
+			calculateHeight: false,
+			spaceBetween: 15,
+			navigation: {
+				nextEl: '.team-nav .next',
+				prevEl: '.team-nav .prev'
+			},
+			breakpoints: {
+				767: {
+					spaceBetween: 20,
+					slidesPerView: 2
+				}, 1200: {
+					spaceBetween: 30,
+					slidesPerView: 3
+				}
+			},
+			on: {
+				touchStart(){
+					$('.team-slider').addClass('is-dragging')
+				}, touchEnd(){
+					$('.team-slider').removeClass('is-dragging')
+				}
+			}
+		})
+
+	}
+}
+
+// init the testimonials section
+function initTestimonials() {
 	if(select('.testimonials-slider')) {
+
+		// testimonials slider animation
 		gsap.fromTo('.testimonials-slider', {
 			x: '10vw'
 		}, {
@@ -253,72 +378,8 @@ function scrollTriggerAnimations() {
 				scrub: 2
 			}
 		})
-	}
-    
-}
 
-// init the top menu
-function initTopMenu() {
-	
-	let currentScroll = 0;
-	let isScrollingDown = true;
-	var topMenu = document.getElementById('top-menu')
-
-	$('#top-menu').addClass('fixed')
-
-	window.addEventListener('scroll', function(){
-	
-		if ( window.pageYOffset > currentScroll ) {
-			isScrollingDown = true;
-			topMenu.classList.remove('fixed');
-		} else {
-			isScrollingDown = false;
-			topMenu.classList.add('fixed');
-		}
-		
-		currentScroll = window.pageYOffset
-		
-	})
-}
-
-// init all the sliders on the website
-function initSliders() {
-
-	// init the team slider
-	if(select('.team-slider')) {
-		const team_slider = new Swiper('.team-slider', {
-			slidesPerView: 1,
-			loop: false,
-			simulateTouch: true,
-			allowTouchMove: true,
-			autoHeight: false,
-			calculateHeight: false,
-			spaceBetween: 15,
-			navigation: {
-				nextEl: '.team-nav .next',
-				prevEl: '.team-nav .prev',
-			},
-			breakpoints: {
-				767: {
-					spaceBetween: 20,
-					slidesPerView: 2
-				}, 1200: {
-					spaceBetween: 30,
-					slidesPerView: 3,
-				}
-			},
-			on: {
-				touchStart(){
-					$('.team-slider').addClass('is-dragging')
-				}, touchEnd(){
-					$('.team-slider').removeClass('is-dragging')
-				}
-			}
-		})
-	}
-
-	// init the testimonials slider
-	if(select('.testimonials-slider')) {
+		// init the testimonials slider
 		const testimonials_slider = new Swiper('.testimonials-slider', {
 			slidesPerView: 1,
 			initialSlide: 1,
@@ -330,7 +391,7 @@ function initSliders() {
 			spaceBetween: 15,
 			navigation: {
 				nextEl: '.testimonials-nav .next',
-				prevEl: '.testimonials-nav .prev',
+				prevEl: '.testimonials-nav .prev'
 			},
 			breakpoints: {
 				767: {
@@ -338,7 +399,7 @@ function initSliders() {
 					slidesPerView: 2
 				}, 1200: {
 					spaceBetween: 30,
-					slidesPerView: 3,
+					slidesPerView: 3
 				}
 			},
 			on: {
@@ -349,8 +410,32 @@ function initSliders() {
 				}
 			}
 		})
-	}
 
+	}
+}
+
+// init the top menu
+function initTopMenu() {
+	
+	let currentScroll = 0
+	let isScrollingDown = true
+	var topMenu = document.getElementById('top-menu')
+
+	$('#top-menu').addClass('fixed')
+
+	window.addEventListener('scroll', function(){
+	
+		if ( window.pageYOffset > currentScroll ) {
+			isScrollingDown = true
+			topMenu.classList.remove('fixed')
+		} else {
+			isScrollingDown = false
+			topMenu.classList.add('fixed')
+		}
+		
+		currentScroll = window.pageYOffset
+		
+	})
 }
 
 // disable console warnings and show skyline message
@@ -365,7 +450,7 @@ function initCopyright() {
 function initMouseCursor() {
 
 	let links = selectAll('a, button')
-	let mouse = document.getElementById('mouse');
+	let mouse = document.getElementById('mouse')
 
 	for (let i = 0; i < links.length; i++) {
 		links[i].addEventListener('mouseover', function(){
@@ -376,8 +461,8 @@ function initMouseCursor() {
 				marginTop: '-1.5rem',
 				marginLeft: '-1.5rem'
 			})
-		});
-	};
+		})
+	}
 	
 	for (let i = 0; i < links.length; i++) {
 		links[i].addEventListener('mouseleave', function(){
@@ -388,8 +473,8 @@ function initMouseCursor() {
 				marginTop: '-.75rem',
 				marginLeft: '-.75rem'
 			})
-		});
-	};
+		})
+	}
 
 	function moveCircle(e) {
 		gsap.to(mouse, .5, {
@@ -405,10 +490,10 @@ function initMouseCursor() {
 function openingAnimation() {
 	const opening = gsap.timeline({
 		delay: 1
-	});
+	})
 
 	opening.set('html', {
-		cursor: 'wait',
+		cursor: 'wait'
 	})
 
 	opening.call(function(){
@@ -480,7 +565,9 @@ function initScript() {
 	initFancybox()
 	validateForms()
 	initLazyLoad()
-	initSliders()
+	initCards()
+	initTeam()
+	initTestimonials()
 	scrollTriggerAnimations()
 	initScrollSmoother()
 	initCopyright()

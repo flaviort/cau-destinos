@@ -46,10 +46,167 @@
 </section>
 
 <section id='cards'>
-	<div class='container'>
+	<div class='container container-big'>
 		<div class='row'>
 			<div class='col-12'>
-				
+
+				<div class='top'>
+
+					<div class='left'>
+
+						<h2 class='text-big light blue reveal-text'>
+							Os padrões foram feıtos para serem quebrados.<br />
+							Explore os destınos Cau.
+						</h2>
+
+					</div>
+
+					<div class='cards-nav navigation'>
+
+						<div class='button prev'>
+							<?php echo file_get_contents('assets/svg/ux/angle-left.svg'); ?>
+							<?php echo file_get_contents('assets/svg/ux/angle-left.svg'); ?>
+						</div>
+
+						<div class='button next'>
+							<?php echo file_get_contents('assets/svg/ux/angle-right.svg'); ?>
+							<?php echo file_get_contents('assets/svg/ux/angle-right.svg'); ?>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class='cards-slider swiper-container'>
+					<div class='swiper-wrapper'>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<p class='floating-text'>
+									Cau informa
+								</p>
+
+								<p class='title light'>
+									Os padrões foram feıtos para serem quebrados<br /><br />
+
+									<span class='blue'>Explore os destınos Cau</span>
+								</p>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<p class='floating-text'>
+									Tailândia
+								</p>
+
+								<img data-src='assets/img/destinations/01.jpg' alt='Tailândia' class='lazy cover'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<p class='floating-text'>
+									Moscou
+								</p>
+
+								<img data-src='assets/img/destinations/02.jpg' alt='Moscou' class='lazy cover'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<p class='floating-text'>
+									Turquia
+								</p>
+
+								<img data-src='assets/img/destinations/03.jpg' alt='Turquia' class='lazy cover'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<p class='floating-text'>
+									Noruega
+								</p>
+
+								<img data-src='assets/img/destinations/04.jpg' alt='Noruega' class='lazy cover'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<p class='floating-text'>
+									Egito
+								</p>
+
+								<img data-src='assets/img/destinations/05.jpg' alt='Egito' class='lazy cover'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<p class='floating-text'>
+									Peru
+								</p>
+
+								<img data-src='assets/img/destinations/06.jpg' alt='Peru' class='lazy cover'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<p class='floating-text'>
+									Jordânia
+								</p>
+
+								<img data-src='assets/img/destinations/07.jpg' alt='Jordânia' class='lazy cover'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<p class='floating-text'>
+									Argentina
+								</p>
+
+								<img data-src='assets/img/destinations/08.jpg' alt='Argentina' class='lazy cover'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<p class='floating-text'>
+									Índia
+								</p>
+
+								<img data-src='assets/img/destinations/09.jpg' alt='Índia' class='lazy cover'>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
