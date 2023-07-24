@@ -1,7 +1,122 @@
 #main-content {
     &.home {
         #banner {
-            height: 100vh;
+            padding-top: 4.75rem;
+            margin-bottom: clamp(2rem, 3vw, 3rem);
+
+            @media #{$mq-sm-min} {
+                padding-top: 5.5rem;
+            }
+
+            .col-12 {
+                .banner-slider {
+                    .swiper-slide {
+                        &.swiper-slide-active {
+                            .box {
+                                img {
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+
+                        .box {
+                            position: relative;
+                            overflow: hidden;
+                            width: 100%;
+                            height: 70vh;
+                            border-radius: clamp(1rem , 2vw, 2rem);
+
+                            @media #{$mq-sm-min} {
+                                border-bottom-left-radius: 0;
+                                height: 60vw;
+                            }
+
+                            @media #{$mq-lg-min} {
+                                height: 40vw;
+                            }
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                z-index: 1;
+                                bottom: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 25%;
+                                background: $black;
+                                background: linear-gradient(0deg, transparentize($black, 0) 0%, transparentize($black, 1) 100%);
+                                opacity: .5;
+                            }
+
+                            img {
+                                transform: scale(1.075);
+                                transition: 6s ease-in-out;
+                            }
+                        }
+                    }
+                }
+
+                .autoplay-indicator {
+                    position: absolute;
+                    z-index: 3;
+                    pointer-events: none;
+                    bottom: 1.175rem;
+                    right: 3rem;
+                    height: .125rem;
+                    backdrop-filter: blur(1rem);
+                    border-radius: 1rem;
+                    width: 45vw;
+
+                    @media #{$mq-md-min} {
+                        width: 25vw;
+                        bottom: 2rem;
+                    }
+
+                    span {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 0;
+                        height: 100%;
+                        background-color: $white;
+                    }
+                }
+
+                .banner-nav {
+                    position: absolute;
+                    z-index: 2;
+                    bottom: 1rem;
+                    left: 2rem;
+                    display: flex;
+                    gap: .125rem;
+
+                    @media #{$mq-md-min} {
+                        gap: 2rem;
+                    }
+
+                    .swiper-pagination-bullet {
+                        opacity: .5;
+                        display: block;
+                        font-size: 0;
+                        background-color: $white;
+
+                        @media #{$mq-md-min} {
+                            width: auto;
+                            height: auto;
+                            background-color: transparent;
+                            font-size: 1rem;
+                            line-height: 1.4;
+                            border-radius: 0;
+                            font-weight: $bold;
+                            color: $white;
+                        }
+
+                        &.swiper-pagination-bullet-active {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
         }
 
         #about {
@@ -204,7 +319,115 @@
         }
 
         #services {
-            
+            margin-bottom: clamp(2rem, 10vw, 10rem);
+
+            .top {
+                margin-bottom: clamp(2rem, 3vw, 3rem);
+
+                @media #{$mq-sm-min} {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                }
+
+                @media #{$mq-sm-max} {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+
+                .left {
+                    @media #{$mq-sm-min} {
+                        width: 75%;
+                    }
+
+                    @media #{$mq-xl-min} {
+                        width: 50%;
+                    }
+
+                    h2 {
+                        text-transform: lowercase;
+                        margin-bottom: clamp(1rem, 2vw, 2rem);
+                    }
+                }
+            }
+
+            .services-slider {
+                cursor: grab;
+
+                @media #{$mq-sm-max} {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+
+                &.is-dragging {
+                    cursor: grabbing;
+
+                    .box {
+                        transform: scale(.9);
+                    }
+                }
+
+                .swiper-slide {
+                    &:nth-child(even) {
+                        @media #{$mq-md-min} {
+                            padding-top: 3rem;
+                        }
+                    }
+
+                    .box {
+                        position: relative;
+                        overflow: hidden;
+                        width: 100%;
+                        align-items: center;
+                        transition: .6s ease-in-out;
+                        padding: 2rem 0;
+
+                        &:before {
+                            content: '';
+                            position: absolute;
+                            z-index: 0;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 90%;
+                            background-color: $gray-lightest;
+                            border-bottom-left-radius: 30rem;
+                            border-bottom-right-radius: 30rem;
+                        }
+
+                        h3 {
+                            position: relative;
+                            z-index: 2;
+                            text-transform: lowercase;
+                            display: block;
+                            padding: 0 1.5rem;
+                            margin-bottom: 1rem;
+
+                            @media #{$mq-md-min} {
+                                padding: 0 2.5rem;
+                                margin-bottom: 1.5rem;
+                            }
+                        }
+
+                        p {
+                            position: relative;
+                            z-index: 2;
+                            display: block;
+                            padding: 0 1.5rem;
+                            margin-bottom: .5rem;
+
+                            @media #{$mq-md-min} {
+                                padding: 0 2.5rem;
+                            }
+                        }
+
+                        img {
+                            position: relative;
+                            z-index: 2;
+                        }
+                    }
+                }
+            }
         }
 
         #directions {

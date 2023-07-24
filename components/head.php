@@ -42,15 +42,12 @@
 			
 		</head>
 
-		<body>
+		<body style='opacity: 0'>
 			<div id='smooth-content'>
 
-				<header>
-					<?php include('components/top-menu.php');?>
-					<?php include('components/fs-menu.php');?>
-					<?php include('components/floating-whatsapp.php');?>
-					<div id='mouse'></div>
-				</header>
+				<?php include('components/top-menu.php');?>
+				<?php include('components/fs-menu.php');?>
+				<?php include('components/floating-whatsapp.php');?>
 
 				<main id='main-content' class='<?php echo($currentPage); ?>'>
 					<div class='main-wrap'>

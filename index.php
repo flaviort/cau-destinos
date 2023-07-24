@@ -7,7 +7,43 @@
 	<div class='container container-big'>
 		<div class='row'>
 			<div class='col-12'>
-				
+
+				<div class='banner-slider swiper-container'>
+					<div class='swiper-wrapper'>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+								<img data-src='assets/img/banner-01.jpg' alt='Índia' class='lazy cover'>
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+								<img data-src='assets/img/banner-02.jpg' alt='Marrocos' class='lazy cover'>
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+								<img data-src='assets/img/banner-03.jpg' alt='Jordânia' class='lazy cover'>
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+								<img data-src='assets/img/banner-04.jpg' alt='Chile' class='lazy cover'>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class='banner-nav'></div>
+
+				<div class='autoplay-indicator'>
+					<span></span>
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -213,9 +249,131 @@
 </section>
 
 <section id='services'>
-	<div class='container container-big'>
+	<div class='container'>
 		<div class='row'>
 			<div class='col-12'>
+
+				<div class='top'>
+
+					<div class='left'>
+
+						<h2 class='text-big light blue reveal-text'>
+							Nós cuidamos de tudo!
+						</h2>
+
+					</div>
+
+					<div class='services-nav navigation'>
+
+						<div class='button prev'>
+							<?php echo file_get_contents('assets/svg/ux/angle-left.svg'); ?>
+							<?php echo file_get_contents('assets/svg/ux/angle-left.svg'); ?>
+						</div>
+
+						<div class='button next'>
+							<?php echo file_get_contents('assets/svg/ux/angle-right.svg'); ?>
+							<?php echo file_get_contents('assets/svg/ux/angle-right.svg'); ?>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class='services-slider swiper-container'>
+					<div class='swiper-wrapper'>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<h3 class='text-big blue'>
+									<b>
+										Passagem
+									</b>
+								</h3>
+
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolo magna aliqua. Ut enim ad minim veniam, quis nost exercitation ullamc laboris nisi ut ex comodo abnos consequat.
+								</p>
+
+								<img src='assets/img/services-01.png' alt='Passagem'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<h3 class='text-big blue'>
+									<b>
+										Hospedagem
+									</b>
+								</h3>
+
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolo magna aliqua. Ut enim ad minim veniam, quis nost exercitation ullamc laboris nisi ut ex comodo abnos consequat.
+								</p>
+
+								<img src='assets/img/services-02.png' alt='Hospedagem'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<h3 class='text-big blue'>
+									<b>
+										Passeios
+									</b>
+								</h3>
+
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolo magna aliqua. Ut enim ad minim veniam, quis nost exercitation ullamc laboris nisi ut ex comodo abnos consequat.
+								</p>
+
+								<img src='assets/img/services-03.png' alt='Passeios'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<h3 class='text-big blue'>
+									<b>
+										Transporte
+									</b>
+								</h3>
+
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolo magna aliqua. Ut enim ad minim veniam, quis nost exercitation ullamc laboris nisi ut ex comodo abnos consequat.
+								</p>
+
+								<img src='assets/img/services-01.png' alt='Transporte'>
+
+							</div>
+						</div>
+
+						<div class='swiper-slide'>
+							<div class='box'>
+
+								<h3 class='text-big blue'>
+									<b>
+										Alimentação
+									</b>
+								</h3>
+
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolo magna aliqua. Ut enim ad minim veniam, quis nost exercitation ullamc laboris nisi ut ex comodo abnos consequat.
+								</p>
+
+								<img src='assets/img/services-02.png' alt='Alimentação'>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
 				
 			</div>
 		</div>

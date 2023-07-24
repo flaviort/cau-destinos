@@ -16,48 +16,19 @@ function initClickAndKeyFunctions() {
 		e.stopImmediatePropagation()
 	})
 
-	var fsMenu = gsap.timeline({
-		paused: true
-	})
-
-	fsMenu.to('#fs-menu', {
-		pointerEvents: 'all',
-		duration: 0
-	})
-
-	fsMenu.to('#mouse', {
-		borderColor: '#fff',
-		duration: 1
-	})
-
-	fsMenu.to('#fs-menu .bg div', {
-		height: '100%',
-		stagger: .1
-	}, '-=1')
-
-	fsMenu.to('#fs-menu .close-fs', {
-		autoAlpha: 1
-	}, '-=.5')
-
-	fsMenu.to('#fs-menu .menu > li', {
-		autoAlpha: 1,
-		stagger: .1
-	})
-
 	// open / close fs menu
 	$('.open-fs').click(function(){
-		fsMenu.play()
+		$('body').toggleClass('fs-menu-open')
 	})
 
-	$('.close-fs, #fs-menu .bg, #fs-menu a').click(function(){
-		fsMenu.reverse()
+	$('#fs-menu a').click(function(){
+		$('body').removeClass('fs-menu-open')
 	})
 
 	// close all opened menus when pressing the ESC key
 	$(document).keyup(function(e) {
 		if(e.key === 'Escape') {
 			$('body').removeClass('fs-menu-open')
-			fsMenu.reverse()
 		}
 	})
 
@@ -101,7 +72,7 @@ function initLazyLoad() {
 		threshold: 200,
 	})
 
-	// refrsh scrolltrigger once an image is loaded
+	// refresh scrolltrigger once an image is loaded
 	gsap.utils.toArray('.lazy').forEach(item => {
 		item.addEventListener('load', () => {
 			if (!item.classList.contains('cover')) {
@@ -178,6 +149,17 @@ function initScrollSmoother() {
 				smoother.paused(false)
 			}
 		})
+
+		// top menu smooth links
+		$('#top-menu .menu button').click(function(e){
+			e.stopImmediatePropagation()
+			let target = $(this).attr('data-href')
+			console.log(target)
+			gsap.to(smoother, {
+				scrollTop: Math.min(ScrollTrigger.maxScroll(window), smoother.offset(target, 'top 100')),
+				duration: 1
+			})
+		})
 	}
 }
 
@@ -218,6 +200,54 @@ function scrollTriggerAnimations() {
 
 	}
     
+}
+
+// init the banner section
+function initBanner() {
+	if(select('.banner-slider')) {
+
+			// init the banner slider
+			const banner_slider = new Swiper('.banner-slider', {
+				slidesPerView: 1,
+				loop: false,
+				simulateTouch: true,
+				allowTouchMove: true,
+				autoHeight: false,
+				calculateHeight: false,
+				spaceBetween: 0,
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true
+				},
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false
+				},
+				speed: 600,
+				pagination: {
+					el: '.banner-nav',
+					clickable: true,
+					renderBullet: function (index, className) {
+						var slides = selectAll('.banner-slider .swiper-slide')
+						var image = slides[index].querySelector('img')
+						var altText = image.getAttribute('alt')
+						var indexText = (index + 1).toString().padStart(2, '0')
+						return '<span class="' + className + '"><p>' + indexText + '.<br />' + altText + '</p></span>'
+					}
+				},
+				on: {
+					slideChangeTransitionStart: function () {
+						var autoplayIndicator = select('.autoplay-indicator span')
+						autoplayIndicator.style.transition = 'none'
+						autoplayIndicator.style.width = '0%'
+						void autoplayIndicator.offsetWidth
+						autoplayIndicator.style.transition = 'width ' + banner_slider.params.autoplay.delay + 'ms linear'
+          				autoplayIndicator.style.width = '100%'
+					}
+				}
+			})
+
+	}
 }
 
 // init the cards section
@@ -305,7 +335,64 @@ function initCards() {
 	}
 }
 
-// init the teams section
+// init the services section
+function initServices() {
+	if(select('.services-slider')) {
+
+		// services slider animation
+		gsap.set('.services-slider .swiper-slide', {
+			x: '50vw',
+			opacity: 0,
+			scale: .75
+		})
+
+		gsap.to('.services-slider .swiper-slide', {
+			x: 0,
+			opacity: 1,
+			scale: 1,
+			duration: 1,
+			scrollTrigger: {
+				trigger: '.services-slider',
+				start: '25% 100%',
+				toggleActions: 'restart pause resume reverse'
+			}
+		})
+
+		// init the services slider
+		const services_slider = new Swiper('.services-slider', {
+			slidesPerView: 1,
+			loop: false,
+			simulateTouch: true,
+			allowTouchMove: true,
+			autoHeight: true,
+			calculateHeight: true,
+			spaceBetween: 15,
+			navigation: {
+				nextEl: '.services-nav .next',
+				prevEl: '.services-nav .prev'
+			},
+			breakpoints: {
+				767: {
+					spaceBetween: 30,
+					slidesPerView: 1.5
+				}, 1200: {
+					spaceBetween: 50,
+					slidesPerView: 2.75
+				}
+			},
+			on: {
+				touchStart(){
+					$('.services-slider').addClass('is-dragging')
+				}, touchEnd(){
+					$('.services-slider').removeClass('is-dragging')
+				}
+			}
+		})
+
+	}
+}
+
+// init the team section
 function initTeam() {
 	if(select('.team-slider')) {
 
@@ -440,123 +527,61 @@ function initTopMenu() {
 
 // disable console warnings and show skyline message
 function initCopyright() {
-	//console.clear()
 	const message = 'Design VVE Fight 🔗 www.vvefight.com \nCode Senz Design 🔗 www.senzdsn.com'
 	const style = 'color: #f8f8f8; font-size: 12px; font-weight: bold; background-color: #0d0e13; padding: 8px'
 	console.log(`%c${message}`, style)
 }
 
-// custom mouse cursor
-function initMouseCursor() {
-
-	let links = selectAll('a, button')
-	let mouse = document.getElementById('mouse')
-
-	for (let i = 0; i < links.length; i++) {
-		links[i].addEventListener('mouseover', function(){
-			gsap.to(mouse, {
-				scale: 2,
-				width: '3rem',
-				height: '3rem',
-				marginTop: '-1.5rem',
-				marginLeft: '-1.5rem'
-			})
-		})
-	}
-	
-	for (let i = 0; i < links.length; i++) {
-		links[i].addEventListener('mouseleave', function(){
-			gsap.to(mouse, {
-				scale: 1,
-				width: '1.5rem',
-				height: '1.5rem',
-				marginTop: '-.75rem',
-				marginLeft: '-.75rem'
-			})
-		})
-	}
-
-	function moveCircle(e) {
-		gsap.to(mouse, .5, {
-			x: e.clientX,
-			y: e.clientY
-		})
-	}
-	
-	window.addEventListener('mousemove', moveCircle)
-}
-
-// fire the opening animation
+// opening animation
 function openingAnimation() {
 	const opening = gsap.timeline({
-		delay: 1
+		delay: .75
 	})
 
 	opening.set('html', {
-		cursor: 'wait'
+		cursor: 'wait',
 	})
 
-	opening.call(function(){
-		initScript()
-	})
-
-	opening.to('#top-menu', {
-		y: '-110%',
-		duration: 0
-	})
-
-	opening.set('#home-banner .bg', {
-		autoAlpha: 0
-	})
-
-	opening.set('#home-banner .col-12', {
-		autoAlpha: 0
+	opening.set('#banner', {
+		autoAlpha: 0,
+		scale: 1.1
 	})
 
 	opening.set('#about', {
-		marginTop: '5rem'
+		autoAlpha: 0,
+		y: '20%'
 	})
 
-	opening.to('#opening .bg div', {
-		y: '-110%',
-		stagger: 0.1,
-		duration: 2
+	opening.call(function() {
+		initScript()
 	})
+
+	opening.to('body', {
+		opacity: 1,
+		clearProps: 'all'
+	})
+
+	opening.to('#banner', {
+		autoAlpha: 1,
+		scale: 1,
+		duration: 1.5
+	})
+
+	opening.to('#about', {
+		autoAlpha: 1,
+		y: 0,
+		duration: 1
+	}, '-=1')
 
 	opening.to('html', {
 		cursor: 'auto',
 		duration: 0
 	})
 
-	opening.to('#home-banner .bg', {
-		autoAlpha: 1,
-		duration: 1
-	}, '-=1')
-
-	opening.to('#about', {
-		marginTop: 0,
-		duration: 1
-	}, '-=1')
-
-	opening.to('#home-banner .col-12', {
-		autoAlpha: 1,
-		duration: 1
-	}, '-=1')
-
-	opening.to('#top-menu', {
-		y: 0,
-		duration: 1
-	}, '-=2')
-
-	opening.call(function(){
+	opening.call(function() {
 		ScrollTrigger.refresh()
-		$('#top-menu').addClass('fixed')
 	})
 
-	opening.to('#top-menu', {
-		clearProps: true,
-		duration: 0
-	})
 }
 
 // fire all scripts on page load
@@ -565,15 +590,16 @@ function initScript() {
 	initFancybox()
 	validateForms()
 	initLazyLoad()
+	initBanner()
 	initCards()
+	//initPinSection()
+	initServices()
 	initTeam()
 	initTestimonials()
 	scrollTriggerAnimations()
 	initScrollSmoother()
 	initCopyright()
-	initMouseCursor()
 	initTopMenu()
-	//openingAnimation()
 }
 
-initScript()
+openingAnimation()

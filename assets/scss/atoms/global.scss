@@ -152,7 +152,9 @@ section {
 	object-fit: cover;
 
 	&.parallax-img {
-		height: 115%;
+		@media #{$mq-md-min} {
+			height: 115%;
+		}
 	}
 }
 

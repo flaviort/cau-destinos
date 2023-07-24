@@ -3,13 +3,121 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9;
+    z-index: 99;
     margin: auto;
     transform: translateY(-125%);
     transition: 1s ease-in-out;
     overflow: visible;
+    background-color: $white;
+    padding: 1.25rem 0;
 
     &.fixed {
         transform: none;
+    }
+
+    .col-12 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+
+        .logo {
+            display: flex;
+            width: 10rem;
+            color: $blue;
+            transition: 1s ease-in-out;
+
+            @media #{$mq-sm-min} {
+                width: 12rem;
+            }
+
+            &:hover {
+                color: lighten($blue, 15);
+            }
+
+            svg {
+                width: 100%;
+            }
+        }
+
+        .menu {
+            display: none;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 4vw;
+
+            @media #{$mq-lg-min} {
+                display: flex;
+            }
+
+            @media #{$mq-xl-min} {
+                gap: 7vw;
+            }
+
+            button {
+                text-transform: lowercase;
+                white-space: nowrap;
+                color: $blue;
+            }
+        }
+
+        .open-fs {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.275rem;
+            height: 2.275rem;
+            color: $blue;
+            padding: 0;
+            margin-right: -.275rem;
+
+            @media #{$mq-lg-min} {
+                display: none;
+            }
+
+            .line {
+                fill: none;
+                stroke: currentColor;
+                stroke-width: 5;
+                transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                &.line-1,
+                &.line-3 {
+                    stroke-dasharray: 60 207;
+                }
+
+                &.line-2 {
+                    stroke-dasharray: 60 60;
+                }
+            }
+        }
+    }
+}
+
+body.fs-menu-open {
+    #top-menu {
+        transform: none!important;
+        background-color: $blue;
+
+        .col-12 {
+            .logo {
+                color: $white;
+            }
+            
+            .open-fs {
+                color: $white;
+
+                .line-1,
+                .line-3 {
+                    stroke-dasharray: 90 207;
+                    stroke-dashoffset: -135;
+                }
+
+                .line-2 {
+                    stroke-dasharray: 1 60;
+                    stroke-dashoffset: -60;
+                }
+            }
+        }
     }
 }
