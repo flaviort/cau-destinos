@@ -396,6 +396,7 @@ function initServices() {
 function initDirections() {
 	if(select('.directions-pin')) {
 
+		let mainImage = $('#directions .images .position-00 .main-image')
 		let image00 = $('#directions .images .position-00')
 		let image01 = $('#directions .images .position-01')
 		let image02 = $('#directions .images .position-02')
@@ -417,7 +418,29 @@ function initDirections() {
 				trigger: '#directions',
 				start: 'top top',
 				endTrigger: '#team',
-				scrub: 3
+				scrub: () => {
+					if (ScrollTrigger.isTouch !== 1) {
+						3
+					} else {
+						true
+					}
+				}
+			}
+		})
+
+		gsap.to(mainImage, {
+			borderRadius: 0,
+			scrollTrigger: {
+				trigger: '#directions',
+				start: 'top top',
+				endTrigger: '#team',
+				scrub: () => {
+					if (ScrollTrigger.isTouch !== 1) {
+						3
+					} else {
+						true
+					}
+				}
 			}
 		})
 
@@ -427,7 +450,13 @@ function initDirections() {
 				trigger: '#directions',
 				start: 'top top',
 				endTrigger: '#team',
-				scrub: 3
+				scrub: () => {
+					if (ScrollTrigger.isTouch !== 1) {
+						3
+					} else {
+						true
+					}
+				}
 			}
 		})
 
@@ -437,7 +466,13 @@ function initDirections() {
 				trigger: '#directions',
 				start: 'top top',
 				endTrigger: '#team',
-				scrub: 3
+				scrub: () => {
+					if (ScrollTrigger.isTouch !== 1) {
+						3
+					} else {
+						true
+					}
+				}
 			}
 		})
 
@@ -447,7 +482,13 @@ function initDirections() {
 				trigger: '#directions',
 				start: 'top top',
 				endTrigger: '#team',
-				scrub: 3
+				scrub: () => {
+					if (ScrollTrigger.isTouch !== 1) {
+						3
+					} else {
+						true
+					}
+				}
 			}
 		})
 
@@ -457,7 +498,13 @@ function initDirections() {
 				trigger: '#directions',
 				start: 'top top',
 				endTrigger: '#team',
-				scrub: 3
+				scrub: () => {
+					if (ScrollTrigger.isTouch !== 1) {
+						3
+					} else {
+						true
+					}
+				}
 			}
 		})
 
@@ -467,7 +514,13 @@ function initDirections() {
 				trigger: '#directions',
 				start: 'top top',
 				endTrigger: '#team',
-				scrub: 3
+				scrub: () => {
+					if (ScrollTrigger.isTouch !== 1) {
+						3
+					} else {
+						true
+					}
+				}
 			}
 		})
 
@@ -477,7 +530,13 @@ function initDirections() {
 				trigger: '#directions',
 				start: 'top top',
 				endTrigger: '#team',
-				scrub: 3
+				scrub: () => {
+					if (ScrollTrigger.isTouch !== 1) {
+						3
+					} else {
+						true
+					}
+				}
 			}
 		})
 
