@@ -50,7 +50,7 @@
 
                             img {
                                 transform: scale(1.075);
-                                transition: 6s ease-in-out;
+                                transition: 7s ease-in-out;
                             }
                         }
                     }
@@ -391,8 +391,10 @@
                             width: 100%;
                             height: 90%;
                             background-color: $gray-lightest;
-                            border-bottom-left-radius: 30rem;
-                            border-bottom-right-radius: 30rem;
+                            border-top-left-radius: 2rem;
+                            border-top-right-radius: 2rem;
+                            border-bottom-left-radius: 100rem;
+                            border-bottom-right-radius: 100rem;
                         }
 
                         h3 {
@@ -432,6 +434,91 @@
 
         #directions {
             height: 100vh;
+            margin-bottom: clamp(2rem, 10vw, 10rem);
+
+            .directions-pin {
+                p {
+                    position: absolute;
+                    z-index: 2;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    color: $white;
+                    opacity: 0;
+
+                    a {
+                        color: $green;
+                    }
+                }
+
+                .images {
+                    .position {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+
+                        .image {
+                            position: absolute;
+                            border-radius: .5rem;
+                            overflow: hidden;
+
+                            &.main-image {    
+                                top: 50%;
+                                left: 50%;
+                                width: 26.25vw;
+                                height: 25vh;
+                                transform: translate(-50%,-50%);
+                            }
+
+                            &.image-01 {
+                                top: 5vh;
+                                left: 36.80556vw;
+                                width: 31.25vw;
+                                height: 30vh;
+                            }
+
+                            &.image-02 {
+                                top: 22.5vh;
+                                left: 15.97222vw;
+                                width: 19.16667vw;
+                                height: 40vh;
+                            }
+
+                            &.image-03 {
+                                top: 50%;
+                                left: 64.93056vw;
+                                width: 26.25vw;
+                                height: 25vh;
+                                transform: translateY(-50%);
+                            }
+
+                            &.image-04 {
+                                top: 65vh;
+                                left: 10.06944vw;
+                                width: 31.25vw;
+                                height: 30vh;
+                            }
+
+                            &.image-05 {
+                                top: 65vh;
+                                left: 43.05556vw;
+                                width: 20.13889vw;
+                                height: 30vh;
+                            }
+
+                            &.image-06 {
+                                top: 65vh;
+                                left: 64.93056vw;
+                                width: 19.16667vw;
+                                height: 12.84722vw;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         #team {

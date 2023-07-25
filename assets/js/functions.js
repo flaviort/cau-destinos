@@ -392,6 +392,98 @@ function initServices() {
 	}
 }
 
+// init the directions section
+function initDirections() {
+	if(select('.directions-pin')) {
+
+		let image00 = $('#directions .images .position-00')
+		let image01 = $('#directions .images .position-01')
+		let image02 = $('#directions .images .position-02')
+		let image03 = $('#directions .images .position-03')
+		let image04 = $('#directions .images .position-04')
+		let image05 = $('#directions .images .position-05')
+		let image06 = $('#directions .images .position-06')
+
+		ScrollTrigger.create({
+			trigger: '#directions',
+			pin: true,
+			start: 'top top',
+			end: '+=' + vh(200)
+		})
+
+		gsap.to(image00, {
+			scale: 4,
+			scrollTrigger: {
+				trigger: '#directions',
+				start: 'top top',
+				endTrigger: '#team',
+				scrub: 3
+			}
+		})
+
+		gsap.to(image01, {
+			scale: 5,
+			scrollTrigger: {
+				trigger: '#directions',
+				start: 'top top',
+				endTrigger: '#team',
+				scrub: 3
+			}
+		})
+
+		gsap.to(image02, {
+			scale: 6,
+			scrollTrigger: {
+				trigger: '#directions',
+				start: 'top top',
+				endTrigger: '#team',
+				scrub: 3
+			}
+		})
+
+		gsap.to(image03, {
+			scale: 8,
+			scrollTrigger: {
+				trigger: '#directions',
+				start: 'top top',
+				endTrigger: '#team',
+				scrub: 3
+			}
+		})
+
+		gsap.to(image04, {
+			scale: 5,
+			scrollTrigger: {
+				trigger: '#directions',
+				start: 'top top',
+				endTrigger: '#team',
+				scrub: 3
+			}
+		})
+
+		gsap.to(image05, {
+			scale: 6,
+			scrollTrigger: {
+				trigger: '#directions',
+				start: 'top top',
+				endTrigger: '#team',
+				scrub: 3
+			}
+		})
+
+		gsap.to(image06, {
+			scale: 9,
+			scrollTrigger: {
+				trigger: '#directions',
+				start: 'top top',
+				endTrigger: '#team',
+				scrub: 3
+			}
+		})
+
+	}
+}
+
 // init the team section
 function initTeam() {
 	if(select('.team-slider')) {
@@ -592,7 +684,7 @@ function initScript() {
 	initLazyLoad()
 	initBanner()
 	initCards()
-	//initPinSection()
+	initDirections()
 	initServices()
 	initTeam()
 	initTestimonials()

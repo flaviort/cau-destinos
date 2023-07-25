@@ -381,12 +381,58 @@
 </section>
 
 <section id='directions'>
-	<div class='container container-big'>
-		<div class='row'>
-			<div class='col-12'>
-				
+	<div class='directions-pin'>
+
+		<p class='text-big light'>
+			Vá na direção de experiências incomuns <a href='#contact' class='hover-underline'>clicando aqui!</a>
+		</p>
+
+		<div class='images'>
+
+			<div class='position position-00'>
+				<div class='image main-image'>
+					<img src='assets/img/australia.jpg' alt='Austrália' class='lazy cover'>
+				</div>
 			</div>
+
+			<div class='position position-01'>
+				<div class='image image-01'>
+					<img src='assets/img/banner-01.jpg' alt='Austrália' class='lazy cover'>
+				</div>
+			</div>
+
+			<div class='position position-02'>
+				<div class='image image-02'>
+					<img src='assets/img/destinations/01.jpg' alt='Austrália' class='lazy cover'>
+				</div>
+			</div>
+
+			<div class='position position-03'>
+				<div class='image image-03'>
+					<img src='assets/img/banner-02.jpg' alt='Austrália' class='lazy cover'>
+				</div>
+			</div>
+
+			<div class='position position-04'>
+				<div class='image image-04'>
+					<img src='assets/img/banner-03.jpg' alt='Austrália' class='lazy cover'>
+				</div>
+			</div>
+
+			<div class='position position-05'>
+				<div class='image image-05'>
+					<img src='assets/img/destinations/02.jpg' alt='Austrália' class='lazy cover'>
+				</div>
+			</div>
+
+			<div class='position position-06'>
+				<div class='image image-06'>
+					<img src='assets/img/camel.jpg' alt='Austrália' class='lazy cover'>
+				</div>
+			</div>
+
 		</div>
+
 	</div>
 </section>
 
