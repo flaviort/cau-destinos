@@ -55,7 +55,7 @@
 			<div class='col-12'>
 				<div class='blue-box'>
 
-					<h2 class='text-big light reveal-text'>
+					<h2 class='text-big light'>
 						Somos a ponte entre você e novas experıêncıas
 					</h2>
 
@@ -63,13 +63,17 @@
 						
 						<div class='col-md-6'>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr exercitation ullamc laboris nisi ut aliquip ex ea comodo consequat. Duis autept dolor in reprehenderit in vol vellhit esse cillum dolore eur fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proide, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Somos criadores de conexões profundas entre viajantes destemidos e as maravilhas espalhadas pelo mundo. Em cada roteiro, costuramos pontes que transcendem o comum, desvendando destinos cativantes e emocionantes, prontos para serem explorados por aqueles que buscam algo além do convencional.<br /><br />
+
+								Cada jornada que criamos é desenhada para inspirar, encantar e desafiar.
 							</p>
 						</div>
 
 						<div class='col-md-6'>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr exercitation ullamc laboris nisi ut aliquip ex ea comodo consequat. Duis autept dolor in reprehenderit in vol vellhit esse cillum dolore eur fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proide, sunt in culpa qui officia deserunt mollit anim id est laborum.
+								Das paisagens majestosas aos sabores locais, das culturas vibrantes às tradições ancestrais, nossos roteiros são a manifestação de experiências que tocam os corações dos viajantes e criam memórias.<br /><br />
+
+								Seja bem-vindo à Cau Destinos, onde criamos pontes entre pessoas e novas experiências, transformando viagens em boas memórias.
 							</p>
 						</div>
 
@@ -148,10 +152,10 @@
 							<div class='box'>
 
 								<p class='floating-text'>
-									Moscou
+									Vietnã
 								</p>
 
-								<img data-src='assets/img/destinations/02.jpg' alt='Moscou' class='lazy cover'>
+								<img data-src='assets/img/destinations/02.jpg' alt='Vietnã' class='lazy cover'>
 
 							</div>
 						</div>
@@ -208,10 +212,10 @@
 							<div class='box'>
 
 								<p class='floating-text'>
-									Jordânia
+									África do Sul
 								</p>
 
-								<img data-src='assets/img/destinations/07.jpg' alt='Jordânia' class='lazy cover'>
+								<img data-src='assets/img/destinations/07.jpg' alt='África do Sul' class='lazy cover'>
 
 							</div>
 						</div>
@@ -232,10 +236,10 @@
 							<div class='box'>
 
 								<p class='floating-text'>
-									Índia
+									Áustria
 								</p>
 
-								<img data-src='assets/img/destinations/09.jpg' alt='Índia' class='lazy cover'>
+								<img data-src='assets/img/destinations/09.jpg' alt='Áustria' class='lazy cover'>
 
 							</div>
 						</div>
@@ -292,7 +296,7 @@
 								</h3>
 
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolo magna aliqua. Ut enim ad minim veniam, quis nost exercitation ullamc laboris nisi ut ex comodo abnos consequat.
+									Proporcionamos pacotes personalizados com passagens aéreas inclusas, permitindo que você explore o mundo de forma descomplicada e única. Deixe-nos criar uma jornada feita sob medida para você!
 								</p>
 
 								<img src='assets/img/services-01.png' alt='Passagem'>
@@ -310,7 +314,7 @@
 								</h3>
 
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolo magna aliqua. Ut enim ad minim veniam, quis nost exercitation ullamc laboris nisi ut ex comodo abnos consequat.
+									De charmosos chalés nas montanhas a aconchegantes hotéis à beira-mar, cada hospedagem é cuidadosamente selecionada para proporcionar uma experiência autêntica e memorável.
 								</p>
 
 								<img src='assets/img/services-02.png' alt='Hospedagem'>
@@ -328,28 +332,10 @@
 								</h3>
 
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolo magna aliqua. Ut enim ad minim veniam, quis nost exercitation ullamc laboris nisi ut ex comodo abnos consequat.
+									Dos encantos escondidos das cidades históricas aos cenários deslumbrantes da natureza, cada passeio é uma jornada de descobertas e emoções. Cada roteiro é uma promessa.
 								</p>
 
 								<img src='assets/img/services-03.png' alt='Passeios'>
-
-							</div>
-						</div>
-
-						<div class='swiper-slide'>
-							<div class='box'>
-
-								<h3 class='text-big blue'>
-									<b>
-										Transporte
-									</b>
-								</h3>
-
-								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolo magna aliqua. Ut enim ad minim veniam, quis nost exercitation ullamc laboris nisi ut ex comodo abnos consequat.
-								</p>
-
-								<img src='assets/img/services-01.png' alt='Transporte'>
 
 							</div>
 						</div>
@@ -364,10 +350,10 @@
 								</h3>
 
 								<p>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolo magna aliqua. Ut enim ad minim veniam, quis nost exercitation ullamc laboris nisi ut ex comodo abnos consequat.
+									Celebre a diversidade dos sabores em suas viagens! Dos mercados vibrantes às mesas de restaurantes estrelados, cada momento à mesa será uma experiência cativante e inesquecível.
 								</p>
 
-								<img src='assets/img/services-02.png' alt='Alimentação'>
+								<img src='assets/img/services-04.png' alt='Alimentação'>
 
 							</div>
 						</div>
@@ -384,7 +370,7 @@
 	<div class='directions-pin'>
 
 		<p class='text-big light'>
-			Vá na direção de experiências incomuns <a href='#contact' class='hover-underline'>clicando aqui!</a>
+			Vá na direção de experiências incomuns <a href='#contact' class='hover-underline sliding-link'>clicando aqui!</a>
 		</p>
 
 		<div class='images'>
@@ -450,7 +436,7 @@
 						</h2>
 
 						<p class='desc'>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididi, labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostr exercitation ullamc laboris nisi ut aliquip ex ea comodo consequat.
+							Somos curadores de sonhos, arquitetos de roteiros e contadores de histórias que se entrelaçam com cada destino. Movidos pela aventura, dedicamos nossa expertise em desvendar tesouros escondidos e desenhar itinerários que transcendem o turismo comum.
 						</p>
 
 					</div>
@@ -513,25 +499,7 @@
 						<div class='swiper-slide'>
 							<div class='box'>
 
-								<img data-src='assets/img/team/03.jpg' alt='Jussara Lopes' class='lazy cover'>
-
-								<h3 class='text-big'>
-									<b>
-										Jussara Lopes
-									</b>
-								</h3>
-
-								<p>
-									Gestora
-								</p>
-
-							</div>
-						</div>
-
-						<div class='swiper-slide'>
-							<div class='box'>
-
-								<img data-src='assets/img/team/04.jpg' alt='Milena Biagi' class='lazy cover'>
+								<img data-src='assets/img/team/03.jpg' alt='Milena Biagi' class='lazy cover'>
 
 								<h3 class='text-big'>
 									<b>
@@ -549,65 +517,11 @@
 						<div class='swiper-slide'>
 							<div class='box'>
 
-								<img data-src='assets/img/team/01.jpg' alt='Caroline Ferreira' class='lazy cover'>
-
-								<h3 class='text-big'>
-									<b>
-										Caroline Ferreira
-									</b>
-								</h3>
-
-								<p>
-									Diretora Administrativa
-								</p>
-
-							</div>
-						</div>
-
-						<div class='swiper-slide'>
-							<div class='box'>
-
-								<img data-src='assets/img/team/02.jpg' alt='Fábio Nicolau' class='lazy cover'>
-
-								<h3 class='text-big'>
-									<b>
-										Fábio Nicolau
-									</b>
-								</h3>
-
-								<p>
-									Diretor Operacional
-								</p>
-
-							</div>
-						</div>
-
-						<div class='swiper-slide'>
-							<div class='box'>
-
-								<img data-src='assets/img/team/03.jpg' alt='Jussara Lopes' class='lazy cover'>
+								<img data-src='assets/img/team/04.jpg' alt='Jussara Lopes' class='lazy cover'>
 
 								<h3 class='text-big'>
 									<b>
 										Jussara Lopes
-									</b>
-								</h3>
-
-								<p>
-									Gestora
-								</p>
-
-							</div>
-						</div>
-
-						<div class='swiper-slide'>
-							<div class='box'>
-
-								<img data-src='assets/img/team/04.jpg' alt='Milena Biagi' class='lazy cover'>
-
-								<h3 class='text-big'>
-									<b>
-										Milena Biagi
 									</b>
 								</h3>
 
@@ -663,20 +577,20 @@
 								<div class='box'>
 
 									<p class='text'>
-										“Agradeço imensamente à Cau por tornar a minha viagem à Tailândia uma experiência inesquecível. A atenção aos detalhes, a organização impecável e a seleção dos melhores passeios fizeram toda a diferença.<br /><br />
+										“Atendimento impecável. A empresa me atendeu de acordo com a minha proposta de viagem. Só tenho que parabenizar a Cau Destinos.<br /><br />
 
-										Recomendo a todos os clientes que desejam vivenciar experiências mágicas.”
+										O atendimento com a Jussara foi maravilhoso, super indico.”
 									</p>
 
 									<div class='bottom'>
 										<p class='name'>
 											<strong>
-												Ana Silva
+												Angela Bertolazzi
 											</strong>
 										</p>
 
 										<p class='position'>
-											Advogada
+											Cliente Cau
 										</p>
 									</div>
 
@@ -687,20 +601,20 @@
 								<div class='box'>
 
 									<p class='text'>
-										“Quero expressar minha gratidão por planejar uma viagem incrível para a Patagônia. A combinação de paisagens deslumbrantes, guias experientes e acomodações confortáveis fez com que essa fosse a melhor viagem da minha vida.<br /><br />
+										“Fizemos nosso pacote de férias para a cidade de Natal para o mês de janeiro 2023, com a Jussara.<br /><br />
 
-										Certamente voltarei a utilizar os serviços da agência no futuro.”
+										Deu tudo muito certo, desde a parte área,  terrestre e o hotel indicado , que foi maravilhoso. Obrigada pela atenção e dedicação!”
 									</p>
 
 									<div class='bottom'>
 										<p class='name'>
 											<strong>
-												Carlos Pereira
+												Angela Barreto
 											</strong>
 										</p>
 
 										<p class='position'>
-											Engenheiro Civil
+											Cliente Cau
 										</p>
 									</div>
 
@@ -711,20 +625,20 @@
 								<div class='box'>
 
 									<p class='text'>
-										“Não poderia estar mais satisfeita com os serviços prestados pela Cau Destinos. Minha viagem à França foi perfeita em todos os aspectos.<br /><br />
+										“Chegou o meu kit viagem, que lembrança linda! A cada dia vocês inovando e cativando o cliente.<br /><br />
 
-										Desde o planejamento cuidadoso até a assistência durante toda a jornada, tudo foi excepcional. Sem dúvida, recomendo a agência a todos os amantes de viagens.”
+										Dessa forma já estou pensando na próxima viagem pelo capricho e valorizo muito essa atenção. Tudo é feito com muito carinho. Parabéns!”
 									</p>
 
 									<div class='bottom'>
 										<p class='name'>
 											<strong>
-												Laura Santos
+												Delsilene
 											</strong>
 										</p>
 
 										<p class='position'>
-											Jornalista
+											Cliente Cau
 										</p>
 									</div>
 
@@ -735,116 +649,20 @@
 								<div class='box'>
 
 									<p class='text'>
-										“Superou todas as minhas expectativas em minha recente viagem ao Japão.<br /><br />
+										“Na Cau Destinos você conta com uma equipe de especialistas em viagem para te dar todo apoio e suporte que necessita! 😊 <br /><br />
 
-										A dedicação da equipe em criar um itinerário personalizado, combinado com o conhecimento profundo da cultura local, garantiu uma experiência autêntica e enriquecedora. Com certeza, voltarei a contar com seus serviços.”
+										As melhores experiências de viagem estão na CAU”
 									</p>
 
 									<div class='bottom'>
 										<p class='name'>
 											<strong>
-												Rodrigo Almeida
+												Jussara Lopes
 											</strong>
 										</p>
 
 										<p class='position'>
-											Empresário
-										</p>
-									</div>
-
-								</div>
-							</div>
-
-							<div class='swiper-slide'>
-								<div class='box'>
-
-									<p class='text'>
-										“Agradeço imensamente à Cau por tornar a minha viagem à Tailândia uma experiência inesquecível. A atenção aos detalhes, a organização impecável e a seleção dos melhores passeios fizeram toda a diferença.<br /><br />
-
-										Recomendo a todos os clientes que desejam vivenciar experiências mágicas.”
-									</p>
-
-									<div class='bottom'>
-										<p class='name'>
-											<strong>
-												Ana Silva
-											</strong>
-										</p>
-
-										<p class='position'>
-											Advogada
-										</p>
-									</div>
-
-								</div>
-							</div>
-
-							<div class='swiper-slide'>
-								<div class='box'>
-
-									<p class='text'>
-										“Quero expressar minha gratidão por planejar uma viagem incrível para a Patagônia. A combinação de paisagens deslumbrantes, guias experientes e acomodações confortáveis fez com que essa fosse a melhor viagem da minha vida.<br /><br />
-
-										Certamente voltarei a utilizar os serviços da agência no futuro.”
-									</p>
-
-									<div class='bottom'>
-										<p class='name'>
-											<strong>
-												Carlos Pereira
-											</strong>
-										</p>
-
-										<p class='position'>
-											Engenheiro Civil
-										</p>
-									</div>
-
-								</div>
-							</div>
-
-							<div class='swiper-slide'>
-								<div class='box'>
-
-									<p class='text'>
-										“Não poderia estar mais satisfeita com os serviços prestados pela Cau Destinos. Minha viagem à França foi perfeita em todos os aspectos.<br /><br />
-
-										Desde o planejamento cuidadoso até a assistência durante toda a jornada, tudo foi excepcional. Sem dúvida, recomendo a agência a todos os amantes de viagens.”
-									</p>
-
-									<div class='bottom'>
-										<p class='name'>
-											<strong>
-												Laura Santos
-											</strong>
-										</p>
-
-										<p class='position'>
-											Jornalista
-										</p>
-									</div>
-
-								</div>
-							</div>
-
-							<div class='swiper-slide'>
-								<div class='box'>
-
-									<p class='text'>
-										“Superou todas as minhas expectativas em minha recente viagem ao Japão.<br /><br />
-
-										A dedicação da equipe em criar um itinerário personalizado, combinado com o conhecimento profundo da cultura local, garantiu uma experiência autêntica e enriquecedora. Com certeza, voltarei a contar com seus serviços.”
-									</p>
-
-									<div class='bottom'>
-										<p class='name'>
-											<strong>
-												Rodrigo Almeida
-											</strong>
-										</p>
-
-										<p class='position'>
-											Empresário
+											Cliente Cau
 										</p>
 									</div>
 
@@ -888,7 +706,7 @@
 
 					<div class='form-line'>
 						<div class='line-wrapper'>
-							<input type='text' id='contact-phone' name='Telefone' placeholder='Telefone' class='input'>
+							<input type='tel' id='contact-phone' name='Telefone' placeholder='Telefone (com DDD)' class='input'>
 						</div>
 					</div>
 

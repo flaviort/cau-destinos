@@ -10,7 +10,7 @@
 			<meta name='format-detection' content='telephone=no'>
 			<link rel='shortcut icon' href='favicon.png'>
 
-			<meta name='author' content='VVE Fight'>
+			<meta name='author' content='VVE Fightn'>
 
 			<title>Cau Destinos <?php echo htmlspecialchars($page);?></title>
 
@@ -32,7 +32,7 @@
 
 			<!-- css -->
 			<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css' />
-			<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.0.5/swiper-bundle.css' />
+			<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css' />
 			<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css' />
 			<link rel='stylesheet' href='assets/css/framework.min.css' type='text/css'>
 			<link rel='preconnect' href='https://fonts.googleapis.com'>

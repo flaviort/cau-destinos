@@ -11,6 +11,13 @@ const vw = (coef) => window.innerWidth * (coef/100)
 // init all click, mouseover and keyup functions
 function initClickAndKeyFunctions() {
 
+	// make anchor links scroll smoothy
+	$('.sliding-link').click(function(e) {
+		e.preventDefault()
+		var aid = $(this).attr('href')
+		$('html, body').animate({ scrollTop: $(aid).offset().top }, 'slow')
+	})
+
 	// correct label click
 	$('label').click(function(e){
 		e.stopImmediatePropagation()
@@ -62,6 +69,14 @@ function initClickAndKeyFunctions() {
             link.addEventListener('mouseleave', animateLink)
         })
     }
+}
+
+// init mask js
+function initMask() {
+	var cleave = new Cleave("input[type='tel']", {
+		delimiters: ['(', ') '],
+    	blocks: [0, 2, 9],
+	});
 }
 
 // init lazyload
@@ -207,6 +222,8 @@ function initBanner() {
 	if(select('.banner-slider')) {
 
 			// init the banner slider
+			var autoplayIndicator = select('.autoplay-indicator span')
+
 			const banner_slider = new Swiper('.banner-slider', {
 				slidesPerView: 1,
 				loop: false,
@@ -236,13 +253,8 @@ function initBanner() {
 					}
 				},
 				on: {
-					slideChangeTransitionStart: function () {
-						var autoplayIndicator = select('.autoplay-indicator span')
-						autoplayIndicator.style.transition = 'none'
-						autoplayIndicator.style.width = '0%'
-						void autoplayIndicator.offsetWidth
-						autoplayIndicator.style.transition = 'width ' + banner_slider.params.autoplay.delay + 'ms linear'
-          				autoplayIndicator.style.width = '100%'
+					autoplayTimeLeft(s, time, progress) {
+						autoplayIndicator.style.setProperty("--progress", 1 - progress);
 					}
 				}
 			})
@@ -397,6 +409,7 @@ function initDirections() {
 	if(select('.directions-pin')) {
 
 		let mainImage = $('#directions .images .position-00 .main-image')
+		let mainText = $('#directions .text-big')
 		let image00 = $('#directions .images .position-00')
 		let image01 = $('#directions .images .position-01')
 		let image02 = $('#directions .images .position-02')
@@ -414,6 +427,24 @@ function initDirections() {
 
 		gsap.to(image00, {
 			scale: 4,
+			scrollTrigger: {
+				trigger: '#directions',
+				start: 'top top',
+				endTrigger: '#team',
+				scrub: () => {
+					if (ScrollTrigger.isTouch !== 1) {
+						3
+					} else {
+						true
+					}
+				}
+			}
+		})
+
+		gsap.from(mainText, {
+			scale: 0,
+			autoAlpha: 0,
+			y: 500,
 			scrollTrigger: {
 				trigger: '#directions',
 				start: 'top top',
@@ -620,7 +651,6 @@ function initTestimonials() {
 		// init the testimonials slider
 		const testimonials_slider = new Swiper('.testimonials-slider', {
 			slidesPerView: 1,
-			initialSlide: 1,
 			loop: false,
 			simulateTouch: true,
 			allowTouchMove: true,
@@ -738,6 +768,7 @@ function openingAnimation() {
 // fire all scripts on page load
 function initScript() {
 	initClickAndKeyFunctions()
+	initMask()
 	initFancybox()
 	validateForms()
 	initLazyLoad()
