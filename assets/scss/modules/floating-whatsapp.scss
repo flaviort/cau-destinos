@@ -3,14 +3,14 @@
     z-index: 50;
     bottom: .75rem;
     right: .75rem;
-    background-color: transparentize($green, .25);
+    background-color: $green;
+    color: $blue;
     line-height: 1;
     padding: .725rem 1.25rem;
     border-radius: 5rem;
     font-size: .825rem;
     transition: .6s ease-in-out;
     text-transform: lowercase;
-    backdrop-filter: blur(1rem);
 
     @media #{$mq-sm-min} {
         font-size: .925rem;
@@ -20,6 +20,7 @@
     }
 
     &:hover {
-        background-color: $green;
+        background-color: darken($blue, 10);
+        color: $white;
     }
 }

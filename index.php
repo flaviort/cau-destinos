@@ -514,7 +514,7 @@
 							</div>
 						</div>
 
-						<div class='swiper-slide'>
+						<!--div class='swiper-slide'>
 							<div class='box'>
 
 								<img data-src='assets/img/team/04.jpg' alt='Jussara Lopes' class='lazy cover'>
@@ -530,7 +530,7 @@
 								</p>
 
 							</div>
-						</div>
+						</div-->
 
 					</div>
 				</div>
@@ -649,15 +649,79 @@
 								<div class='box'>
 
 									<p class='text'>
-										“Na Cau Destinos você conta com uma equipe de especialistas em viagem para te dar todo apoio e suporte que necessita! 😊 <br /><br />
-
-										As melhores experiências de viagem estão na CAU”
+										"Há muitos anos você faz parte das nossas vidas com roteiros incríveis. Desta vez não poderia ser diferente, obrigada por fazer parte desse momento mágico da nossa família com a Aurora pela primeira vez na Disney."
 									</p>
 
 									<div class='bottom'>
 										<p class='name'>
 											<strong>
-												Jussara Lopes
+												Gisella Andreassa
+											</strong>
+										</p>
+
+										<p class='position'>
+											Cliente Cau
+										</p>
+									</div>
+
+								</div>
+							</div>
+
+							<div class='swiper-slide'>
+								<div class='box'>
+
+									<p class='text'>
+										"Adoramos a viagem, o hotel é simplesmente lindo, tão grande que cada dia que andávamos um pouco nele descobrimos algo novo. Para as crianças foi um sonho e com certeza ficará marcado."
+									</p>
+
+									<div class='bottom'>
+										<p class='name'>
+											<strong>
+												Barbara Freitas
+											</strong>
+										</p>
+
+										<p class='position'>
+											Cliente Cau
+										</p>
+									</div>
+
+								</div>
+							</div>
+
+							<div class='swiper-slide'>
+								<div class='box'>
+
+									<p class='text'>
+										"A viagem foi muito legal, os voos de ida e volta sairam no horário, o hotel com uma boa estrutura, limpeza e conservação das áreas. Os transffers muito bom na van exclusiva, ótimo serviço de vocês!"
+									</p>
+
+									<div class='bottom'>
+										<p class='name'>
+											<strong>
+												Alexandre Ara
+											</strong>
+										</p>
+
+										<p class='position'>
+											Cliente Cau
+										</p>
+									</div>
+
+								</div>
+							</div>
+
+							<div class='swiper-slide'>
+								<div class='box'>
+
+									<p class='text'>
+										"Foi delicioso, melhor coisa foi ter pego o all inclusive, conhecemos diversos restaurantes e comidas diferentes. Fizemos passeios deliciosos e o hotel excelente, Playa linda!"
+									</p>
+
+									<div class='bottom'>
+										<p class='name'>
+											<strong>
+												Mahiti Godoy
 											</strong>
 										</p>
 

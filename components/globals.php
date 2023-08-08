@@ -1,27 +1,13 @@
 <?php
 
-	// page title
-	if (empty($pageTitle)) {
-	    $page = '';
-	} else {
-	    $page = '| ' . $pageTitle;
-	}
-
 	// global vars
 	$siteUrl = "https://dev.senzdsn.com/cau-destinos";
-	$phone = "xxx-xxx-xxxx";
-	$linkedin = "https://www.linkedin.com/";
-	$facebook = "https://www.facebook.com/";
-	$instagram = "https://www.instagram.com/";
-	$email = "email@email.com";
-
-	// active class in the menus
-	function active($active_page) {
-	    $url_array = explode('/', $_SERVER['REQUEST_URI']);
-	    $url = end($url_array);
-	    if ($active_page == $url) {
-	        echo 'active';
-	    }
-	}
+	$phone = "11 91075 3704";
+	$linkedin = "https://www.linkedin.com/company/cau-destinos/about/";
+	$facebook = "https://www.facebook.com/p/CAU-Destinos-100065645463118/";
+	$instagram = "https://www.instagram.com/caudestinos/";
+	$linktree = "https://linktr.ee/caudestinos";
+	$email = "consultoria@caudestinos.com.br";
+	$whatsapp = "https://api.whatsapp.com/message/H6HSFGVXQRF6F1?autoload=1&app_absent=0";
 	
 ?>

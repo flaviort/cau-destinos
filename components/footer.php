@@ -50,7 +50,7 @@
 
                                                         <li>
                                                             <a href='tel:11-91075-3704' class='hover-underline'>
-                                                                11 91075 3704
+                                                                <?php echo($phone); ?>
                                                             </a>
                                                         </li>
 
@@ -61,8 +61,8 @@
                                                         </li>
 
                                                         <li>
-                                                            <a href='mailto:contato@caudestınos.com.br' class='hover-underline'>
-                                                                contato@caudestınos.com.br
+                                                            <a href='mailto:<?php echo($email); ?>' class='hover-underline'>
+                                                                <?php echo($email); ?>
                                                             </a>
                                                         </li>
 
@@ -71,35 +71,35 @@
                                                     <ul class='social'>
 
                                                         <li>
-                                                            <a href='https://www.instagram.com/caudestinos/' target='_blank'>
+                                                            <a href='<?php echo($instagram); ?>' target='_blank'>
                                                                 <span class='text hover-underline'>Instagram</span>
                                                                 <?php echo file_get_contents('assets/svg/social/instagram.svg'); ?>
                                                             </a>
                                                         </li>
 
                                                         <li>
-                                                            <a href='https://linktr.ee/caudestinos' target='_blank'>
+                                                            <a href='<?php echo($linktree); ?>' target='_blank'>
                                                                 <span class='text hover-underline'>Linktree</span>
                                                                 <?php echo file_get_contents('assets/svg/social/linktree.svg'); ?>
                                                             </a>
                                                         </li>
 
                                                         <li>
-                                                            <a href='https://www.facebook.com/p/CAU-Destinos-100065645463118/' target='_blank'>
+                                                            <a href='<?php echo($facebook); ?>' target='_blank'>
                                                                 <span class='text hover-underline'>Facebook</span>
                                                                 <?php echo file_get_contents('assets/svg/social/facebook.svg'); ?>
                                                             </a>
                                                         </li>
 
                                                         <li>
-                                                            <a href='https://www.linkedin.com/company/cau-destinos/about/' target='_blank'>
+                                                            <a href='<?php echo($linkedin); ?>' target='_blank'>
                                                                 <span class='text hover-underline'>Linkedin</span>
                                                                 <?php echo file_get_contents('assets/svg/social/linkedin.svg'); ?>
                                                             </a>
                                                         </li>
 
                                                         <li>
-                                                            <a href='https://api.whatsapp.com/message/H6HSFGVXQRF6F1?autoload=1&app_absent=0' target='_blank'>
+                                                            <a href='<?php echo($whatsapp); ?>' target='_blank'>
                                                                 <span class='text hover-underline'>Whatsapp</span>
                                                                 <?php echo file_get_contents('assets/svg/social/whatsapp.svg'); ?>
                                                             </a>

@@ -1,4 +1,4 @@
-<?php include('components/atoms/globals.php') ?>
+<?php include('components/globals.php') ?>
 
 <!DOCTYPE html>
 	<html lang='pt-BR'>
@@ -10,19 +10,19 @@
 			<meta name='format-detection' content='telephone=no'>
 			<link rel='shortcut icon' href='favicon.png'>
 
-			<meta name='author' content='VVE Fightn'>
+			<meta name='author' content='VVE Fight'>
 
-			<title>Cau Destinos <?php echo htmlspecialchars($page);?></title>
+			<title>Cau Destinos</title>
 
 			<!-- google -->
-			<meta name='description' content='Cau Destinos - Estamos construindo a ponte na direção de experiências incomuns e não convencionais. Com anos de experiência e competência, estamos prontos para ajudá-lo a planejar a sua próxima jornada!'/>
+			<meta name='description' content='Cau Destinos - Criamos pontes entre pessoas e novas experiências, transformando viagens em boas memórias.'/>
 			<link rel='canonical' href='<?php echo($siteUrl); ?>' />
 				
 			<!-- facebook -->
 			<meta property='og:locale' content='pt_BR' />
 			<meta property='og:type' content='website' />
 			<meta property='og:title' content='Cau Destinos' />
-			<meta property='og:description' content='Cau Destinos - Estamos construindo a ponte na direção de experiências incomuns e não convencionais. Com anos de experiência e competência, estamos prontos para ajudá-lo a planejar a sua próxima jornada!' />
+			<meta property='og:description' content='Cau Destinos - Criamos pontes entre pessoas e novas experiências, transformando viagens em boas memórias.' />
 			<meta property='og:url' content='<?php echo($siteUrl); ?>/' />
 			<meta property='og:site_name' content='Cau Destinos' />
 			<meta property='og:image' content='<?php echo($siteUrl); ?>/assets/img/og-image.jpg' />
