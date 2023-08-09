@@ -1,7 +1,7 @@
 <?php
 
 	// global vars
-	$siteUrl = "https://dev.senzdsn.com/cau-destinos";
+	$siteUrl = "https://caudestinos.com.br";
 	$phone = "11 91075 3704";
 	$linkedin = "https://www.linkedin.com/company/cau-destinos/about/";
 	$facebook = "https://www.facebook.com/p/CAU-Destinos-100065645463118/";
