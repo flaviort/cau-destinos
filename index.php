@@ -472,7 +472,7 @@
 								</h3>
 
 								<p>
-									Diretora Administrativa
+									Gestora de Vendas
 								</p>
 
 							</div>
@@ -490,7 +490,7 @@
 								</h3>
 
 								<p>
-									Diretor Operacional
+									Diretor Comercial
 								</p>
 
 							</div>
@@ -508,7 +508,7 @@
 								</h3>
 
 								<p>
-									Gestora
+									Gestora Operacional
 								</p>
 
 							</div>
