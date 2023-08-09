@@ -11,6 +11,13 @@ const vw = (coef) => window.innerWidth * (coef/100)
 // init all click, mouseover and keyup functions
 function initClickAndKeyFunctions() {
 
+	// show success message after form submit
+	if (window.location.href.indexOf('contact-success') > -1) {
+		setTimeout(function(){
+			select('.contact-success').click()
+		}, 300)
+	}
+
 	// make anchor links scroll smoothy
 	$('.sliding-link').click(function(e) {
 		e.preventDefault()
@@ -97,15 +104,6 @@ function initLazyLoad() {
 	})
 }
 
-// init fancybox
-function initFancybox() {
-	Fancybox.bind('[data-fancybox]', {
-		autoFocus: false,
-		dragToClose: false,
-		placeFocusBack: false,
-	})
-}
-
 // validate footer newsletter
 function validateForms() {
 	if(selectAll('.form-validate')) {
@@ -174,6 +172,30 @@ function initScrollSmoother() {
 				scrollTop: Math.min(ScrollTrigger.maxScroll(window), smoother.offset(target, 'top 100')),
 				duration: 1
 			})
+		})
+
+		// init fancybox
+		Fancybox.bind('[data-fancybox]', {
+			autoFocus: false,
+			dragToClose: false,
+			placeFocusBack: false,
+			on: {
+				init: () => {
+					smoother.paused(true)
+				},
+				destroy: () => {
+					smoother.paused(false)
+				}
+			}
+		})
+
+	} else {
+
+		// init fancybox on mobile
+		Fancybox.bind('[data-fancybox]', {
+			autoFocus: false,
+			dragToClose: false,
+			placeFocusBack: false
 		})
 	}
 }
@@ -769,7 +791,6 @@ function openingAnimation() {
 function initScript() {
 	initClickAndKeyFunctions()
 	initMask()
-	initFancybox()
 	validateForms()
 	initLazyLoad()
 	initBanner()

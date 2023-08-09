@@ -671,7 +671,7 @@
 								<div class='box'>
 
 									<p class='text'>
-										"Adoramos a viagem, o hotel é simplesmente lindo, tão grande que cada dia que andávamos um pouco nele descobrimos algo novo. Para as crianças foi um sonho e com certeza ficará marcado."
+										"Adoramos a viagem, o hotel é simplesmente lindo, tão grande que a cada dia que andávamos um pouco nele descobrimos algo novo. Para as crianças foi um sonho e com certeza ficará marcado."
 									</p>
 
 									<div class='bottom'>
@@ -693,7 +693,7 @@
 								<div class='box'>
 
 									<p class='text'>
-										"A viagem foi muito legal, os voos de ida e volta sairam no horário, o hotel com uma boa estrutura, limpeza e conservação das áreas. Os transffers muito bom na van exclusiva, ótimo serviço de vocês!"
+										"A viagem foi muito legal, os voos de ida e volta saíram no horário, o hotel com uma boa estrutura, limpeza e conservação das áreas. Os transfers muito bons na van exclusiva, ótimo serviço de vocês!"
 									</p>
 
 									<div class='bottom'>
@@ -715,7 +715,7 @@
 								<div class='box'>
 
 									<p class='text'>
-										"Foi delicioso, melhor coisa foi ter pego o all inclusive, conhecemos diversos restaurantes e comidas diferentes. Fizemos passeios deliciosos e o hotel excelente, Playa linda!"
+										"Foi delicioso, a melhor coisa foi ter pego o all inclusive, conhecemos diversos restaurantes e comidas diferentes. Fizemos passeios deliciosos e o hotel excelente, Playa linda!"
 									</p>
 
 									<div class='bottom'>
@@ -754,7 +754,13 @@
 					<strong>falando conosco!</strong>
 				</h2>
 
-				<form action='#' class='form-validate'>
+				<form action='https://formsubmit.co/<?php echo($email); ?>' method='post' id='contact-form' class='form-validate'>
+
+					<input type='hidden' name='_next' value='<?php echo($siteUrl); ?>/#contact-success'>
+					<input type='text' name='_honey' style='display: none'>
+					<input type='hidden' name='_captcha' value='false'>
+					<input type='hidden' name='_template' value='box'>
+					<input type='hidden' name='_subject' value='Formulário de Contato'>
 
 					<div class='form-line'>
 						<div class='line-wrapper'>
@@ -789,6 +795,9 @@
 								Enviar!
 							</span>
 						</label>
+
+						<a href='#contact-success' data-fancybox class='contact-success'></a>
+						<?php include('components/popups/contact.php'); ?>
 
 					</div>
 

@@ -1,3 +1,65 @@
 .popup {
     display: none;
+    padding: .5rem;
+    background-color: $white;
+    max-width: calc(100% - 1.25rem);
+    width: 100vw;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    border-radius: clamp(1rem, 3vw, 3rem);
+
+    @media #{$mq-sm-min} {
+        width: 90vw;
+    }
+
+    @media #{$mq-md-min} {
+        width: 82.475vw;
+    }
+
+    @media #{$mq-xl-min} {
+        width: 64.5vw;
+    }
+
+    &.fancybox__content > .is-close-btn {
+        top: -2rem!important;
+        right: -.5rem!important;
+        background-color: transparent!important;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: clamp(1.25rem, 2vw, 2rem);
+        padding: 1.75rem 1rem;
+
+        @media #{$mq-xs-min} {
+            padding: 2rem 1.5rem;
+        }
+
+        @media #{$mq-sm-min} {
+            padding: 3rem 2.5rem;
+        }
+
+        @media #{$mq-md-min} {
+            padding: 4rem 3rem;
+        }
+
+        @media #{$mq-xl-min} {
+            padding: 5rem 4rem;
+        }
+
+        h2 {
+            color: $blue;
+            text-transform: lowercase;
+        }
+
+        .desc {
+            margin-bottom: .75rem;
+        }
+    }
 }

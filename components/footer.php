@@ -117,6 +117,10 @@
                                                     <?php echo file_get_contents('assets/svg/logo.svg'); ?>
                                                 </a>
 
+                                                <a href="#banner" class="sliding-link hover-underline">
+                                                    Voltar ao topo
+                                                </a>
+
                                             </div>
 
                                         </div>
