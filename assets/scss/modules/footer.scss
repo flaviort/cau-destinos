@@ -86,15 +86,17 @@
                     }
 
                     .contact {
-                        @media #{$mq-md-min} {
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            gap: 2rem;
-                        }
+                        display: flex;
+                        gap: 1.5rem;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
 
                         @media #{$mq-lg-min} {
+                            flex-direction: row;
                             justify-content: flex-start;
+                            align-items: flex-end;
+                            gap: 2rem;
                         }
                     }
 

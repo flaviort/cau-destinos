@@ -49,18 +49,19 @@
                                                     <ul class='contact'>
 
                                                         <li>
+                                                            <a href='https://goo.gl/maps/pDK7JfLBKjg5uugVA' target='_blank' class='hover-underline'>
+                                                                R. Arquiteto Olavo Redig de Campos, 105 - Sala 2491 <br />
+                                                                Chácara Santo Antônio (Zona Sul), São Paulo, 04711-905
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
                                                             <a href='tel:11-91075-3704' class='hover-underline'>
                                                                 <?php echo($phone); ?>
                                                             </a>
-                                                        </li>
+                                                            
+                                                            <br />
 
-                                                        <li>
-                                                            <a href='https://goo.gl/maps/pDK7JfLBKjg5uugVA' target='_blank' class='hover-underline'>
-                                                                Av Paulısta 475 – SP
-                                                            </a>
-                                                        </li>
-
-                                                        <li>
                                                             <a href='mailto:<?php echo($email); ?>' class='hover-underline'>
                                                                 <?php echo($email); ?>
                                                             </a>
