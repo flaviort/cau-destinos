@@ -83,7 +83,7 @@ function initMask() {
 	var cleave = new Cleave("input[type='tel']", {
 		delimiters: ['(', ') '],
     	blocks: [0, 2, 9],
-	});
+	})
 }
 
 // init lazyload
@@ -276,7 +276,7 @@ function initBanner() {
 				},
 				on: {
 					autoplayTimeLeft(s, time, progress) {
-						autoplayIndicator.style.setProperty("--progress", 1 - progress);
+						autoplayIndicator.style.setProperty("--progress", 1 - progress)
 					}
 				}
 			})
