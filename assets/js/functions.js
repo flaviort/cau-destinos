@@ -82,7 +82,7 @@ function initClickAndKeyFunctions() {
 function initMask() {
 	var cleave = new Cleave("input[type='tel']", {
 		delimiters: ['(', ') '],
-    	blocks: [0, 2, 9],
+    	blocks: [0, 2, 10],
 	})
 }
 
